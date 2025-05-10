@@ -1,0 +1,217 @@
+/* ==UserStyle==
+@name Open Collective Catppuccin
+@namespace github.com/catppuccin/userstyles/styles/open-collective
+@homepageURL https://github.com/catppuccin/userstyles/tree/main/styles/open-collective
+@version 2025.05.07
+@updateURL https://github.com/catppuccin/userstyles/raw/main/styles/open-collective/catppuccin.user.less
+@supportURL https://github.com/catppuccin/userstyles/issues?q=is%3Aopen+is%3Aissue+label%3Aopen-collective
+@description Soothing pastel theme for Open Collective
+@author Catppuccin
+@license MIT
+
+@preprocessor less
+@var select lightFlavor "Light Flavor" ["latte:Latte*", "frappe:Frappé", "macchiato:Macchiato", "mocha:Mocha"]
+@var select darkFlavor "Dark Flavor" ["latte:Latte", "frappe:Frappé", "macchiato:Macchiato", "mocha:Mocha*"]
+@var select accentColor "Accent" ["rosewater:Rosewater", "flamingo:Flamingo", "pink:Pink", "mauve:Mauve*", "red:Red", "maroon:Maroon", "peach:Peach", "yellow:Yellow", "green:Green", "teal:Teal", "blue:Blue", "sapphire:Sapphire", "sky:Sky", "lavender:Lavender", "subtext0:Gray"]
+==/UserStyle== */
+
+@-moz-document domain("opencollective.com") {
+  :root {
+    @media (prefers-color-scheme: light) {
+      #catppuccin(@lightFlavor);
+    }
+    @media (prefers-color-scheme: dark) {
+      #catppuccin(@darkFlavor);
+    }
+  }
+  :root[data-theme="dark"] {
+    #catppuccin(@darkFlavor);
+  }
+  :root[data-theme="light"] {
+    #catppuccin(@lightFlavor);
+  }
+
+  #catppuccin(@flavor) {
+    @rosewater: @catppuccin[@@flavor][@rosewater];
+    @flamingo: @catppuccin[@@flavor][@flamingo];
+    @pink: @catppuccin[@@flavor][@pink];
+    @mauve: @catppuccin[@@flavor][@mauve];
+    @red: @catppuccin[@@flavor][@red];
+    @maroon: @catppuccin[@@flavor][@maroon];
+    @peach: @catppuccin[@@flavor][@peach];
+    @yellow: @catppuccin[@@flavor][@yellow];
+    @green: @catppuccin[@@flavor][@green];
+    @teal: @catppuccin[@@flavor][@teal];
+    @sky: @catppuccin[@@flavor][@sky];
+    @sapphire: @catppuccin[@@flavor][@sapphire];
+    @blue: @catppuccin[@@flavor][@blue];
+    @lavender: @catppuccin[@@flavor][@lavender];
+    @text: @catppuccin[@@flavor][@text];
+    @subtext1: @catppuccin[@@flavor][@subtext1];
+    @subtext0: @catppuccin[@@flavor][@subtext0];
+    @overlay2: @catppuccin[@@flavor][@overlay2];
+    @overlay1: @catppuccin[@@flavor][@overlay1];
+    @overlay0: @catppuccin[@@flavor][@overlay0];
+    @surface2: @catppuccin[@@flavor][@surface2];
+    @surface1: @catppuccin[@@flavor][@surface1];
+    @surface0: @catppuccin[@@flavor][@surface0];
+    @base: @catppuccin[@@flavor][@base];
+    @mantle: @catppuccin[@@flavor][@mantle];
+    @crust: @catppuccin[@@flavor][@crust];
+    @accent: @catppuccin[@@flavor][@@accentColor];
+    @red-filter: @catppuccin-filters[@@flavor][@red];
+    @blue-filter: @catppuccin-filters[@@flavor][@blue];
+    @text-filter: @catppuccin-filters[@@flavor][@text];
+
+    color-scheme: if(@flavor = latte, light, dark);
+
+    ::selection {
+      background-color: fade(@accent, 30%);
+    }
+
+    input,
+    textarea {
+      &::placeholder {
+        color: @subtext0 !important;
+      }
+    }
+
+      .blNyfM, .fstwEu, div[id="__next"], .bg-background, .iyoojn, .dSwqhL {
+        background-color: @base;
+      }
+      .dSwqhL {
+          border-color: @base;
+          box-shadow: @text 0px 4px 8px;
+      }
+      .qHkCy, .hhgUpD {
+          background-color: @crust;
+      }
+      .text-primary, .hCGocX, .cbgkFV, .dmBhve, .NqVma, .gJhFkH, .dAioSw, .kCvFFs, .iKjIOl, .fYYRls, .jctkRc {
+          color: @blue;
+      }
+      .lfZRal, .cHxfUr, .faHzBn, .bSutug, .dlpwoT, .llNXqp, .TeyLd, .kMGYAO, .text-muted-foreground, .iQoPKM, .jzeGiY, .lfZRal, .hKNnZG, .hCPQDs {
+          color: @subtext1;
+      }
+      .kMGYAO:hover {
+          color: @overlay1;
+      }
+      .iMxWCx, .beytcq, .cOLwRI {
+          background: @blue;
+      }
+      .iMxWCx:hover, .beytcq:hover, .cOLwRI:hover {
+          background: @sapphire;
+      }
+      div.sc-62f56b22-0.gYnRlf {
+          border-right: 2px solid @text;
+      }
+     .ezsikr, .border, .kWhSRE, .text-foreground, .bgePcY, .qHkCy, .gryEQo, .hhgUpD, .keejzk, .eiClvx {
+         color: @text;
+     }
+      button.h-10 {
+          stroke: @text;
+      }
+      h-10[aria-expanded="true"] {
+          background: @mantle;
+          color: @text;
+      }
+      .cdgyEA {
+          background-color: @text;
+      }
+      .hHdtlH, .iICqcm, .fdGkAk {
+          border-color: @blue;
+      }
+      .bgePcY {
+        &::marker {
+          color: @blue;
+        }
+      }
+      .kMGYAO {
+        text-decoration: underline;
+        text-decoration-color: @text;
+        &:hover {
+          text-decoration-color: @blue;
+        }
+      }
+      .eEVmIq {
+          background-color: @flamingo;
+      }
+      .eEVmIq:hover {
+          background-color: @rosewater;
+      }
+      .cNIWuR {
+          color: @crust;
+      }
+      .hjdxAJ {
+          color: @base;
+      }
+      .bXsmVz {
+          color: @red;
+      }
+      .hhgUpD {
+          border-left-color: @text;
+      }
+      .hhgUpD:hover {
+          border-left-color: @crust;
+      }
+      .fdGkAk:hover {
+          background-color: @mantle;
+      }
+      button.sc-b8c81657-0 svg[width="18"][height="18"][viewBox="10 10 30 30"] path {
+           fill: @text;
+       }
+       .uKUKI svg[width="24"][height="24"][viewBox="0 0 16 16"] path {
+           fill: @crust;
+       }
+       .bZylzY svg[width="16"][height="16"][viewBox="0 0 512 512"] path {
+           fill: @text;
+       }
+       .ebjPRL[width="40px"][height="40px"][viewBox="0 0 448 512"] path {
+           fill: @text;
+       }
+     .egOIEq img {
+         @svg: escape('<svg width="137" height="23" viewBox="0 0 137 23" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M76.5834 0.875H74.8117C74.7394 0.875 74.7033 0.913514 74.7033 0.990541V17.0892C74.7033 17.1662 74.7394 17.2047 74.8117 17.2047H76.5834C76.6557 17.2047 76.6919 17.1662 76.6919 17.0892V0.990541C76.6557 0.913514 76.6195 0.875 76.5834 0.875Z" fill="@{blue}"/><path d="M108.871 5.88176H110.859C110.895 5.88176 110.968 5.95879 110.968 5.9973V7.88446C110.968 7.96149 110.932 8 110.859 8H108.871C108.834 8 108.798 8.03851 108.798 8.07703V17.0892C108.798 17.1662 108.762 17.2047 108.69 17.2047H106.918C106.846 17.2047 106.81 17.1662 106.81 17.0892V8.07703C106.81 8.03851 106.774 8 106.737 8H104.785C104.713 8 104.677 7.96149 104.677 7.88446V5.9973C104.677 5.92027 104.713 5.88176 104.785 5.88176H106.737C106.774 5.88176 106.81 5.84324 106.81 5.80473V0.990541C106.81 0.913514 106.846 0.875 106.918 0.875H108.69C108.762 0.875 108.798 0.913514 108.798 0.990541V5.80473C108.798 5.84324 108.834 5.88176 108.871 5.88176Z" fill="@{blue}"/><path d="M112.739 2.26154H114.511C114.583 2.26154 114.619 2.30006 114.619 2.37708V4.26425C114.619 4.34127 114.583 4.37979 114.511 4.37979H112.739C112.667 4.37979 112.631 4.34127 112.631 4.26425V2.37708C112.631 2.30006 112.667 2.26154 112.739 2.26154Z" fill="@{blue}"/><path d="M112.739 5.88181H114.511C114.583 5.88181 114.619 5.95884 114.619 5.99735V17.0892C114.619 17.1663 114.583 17.2048 114.511 17.2048H112.739C112.667 17.2048 112.631 17.1663 112.631 17.0892V5.99735C112.631 5.92033 112.667 5.88181 112.739 5.88181Z" fill="@{blue}"/><path fill-rule="evenodd" clip-rule="evenodd" d="M131.649 15.2791C130.6 15.2791 129.696 14.8169 129.046 14.0467C129.009 13.9697 129.009 13.8926 129.082 13.8541L135.156 11.1197L136.928 10.3109C137 10.2724 137 10.2338 137 10.1953C136.421 7.5379 134.144 5.57371 131.468 5.68925C128.648 5.80479 126.298 8.23114 126.189 11.2352C126.045 14.5859 128.539 17.3588 131.685 17.3588C133.963 17.3588 135.915 15.8568 136.747 13.7386C136.783 13.6615 136.747 13.5845 136.674 13.5845L134.903 13.2379C134.867 13.2379 134.794 13.2379 134.794 13.3149C134.144 14.4703 132.987 15.2791 131.649 15.2791ZM131.649 7.80753C132.697 7.80753 133.637 8.30821 134.252 9.07848C134.288 9.15551 134.288 9.23253 134.216 9.27105C134.216 9.27105 128.359 11.9285 128.286 11.967C128.214 12.0055 128.142 11.9285 128.142 11.89V11.5819C128.105 9.46362 129.696 7.80753 131.649 7.80753Z" fill="@{blue}"/><path d="M124.201 5.88181H125.936C126.009 5.88181 126.045 5.95884 125.972 6.03587L122.393 17.1278C122.357 17.1663 122.321 17.2048 122.284 17.2048H119.826C119.754 17.2048 119.717 17.1663 119.717 17.1278L116.138 6.03587C116.138 5.95884 116.174 5.88181 116.246 5.88181H117.982C118.054 5.88181 118.09 5.92033 118.09 5.95884L120.911 14.7784C120.983 14.971 121.2 14.971 121.272 14.7784L124.092 5.95884C124.128 5.92033 124.165 5.88181 124.201 5.88181Z" fill="@{blue}"/><path d="M99.2532 15.279C97.0838 15.279 95.3845 13.1993 95.7822 10.8115C95.9991 9.50201 97.2284 8.15404 98.4577 7.88445C99.7955 7.57634 101.061 8.07701 101.856 9.03985C101.893 9.07837 101.965 9.07837 102.001 9.03985L103.266 7.69188C103.303 7.65337 103.303 7.57634 103.266 7.53782C102.218 6.30539 100.663 5.57363 98.9639 5.65066C96.1799 5.80472 93.8659 8.23107 93.7213 11.1966C93.5767 14.5473 96.0714 17.3203 99.217 17.3203C100.808 17.3203 102.254 16.5885 103.266 15.4331C103.303 15.3946 103.303 15.3561 103.266 15.3176L102.001 13.9696C101.965 13.9311 101.893 13.9311 101.856 13.9696C101.242 14.8169 100.302 15.279 99.2532 15.279Z" fill="@{blue}"/><path fill-rule="evenodd" clip-rule="evenodd" d="M87.4301 15.279C86.3816 15.279 85.4777 14.8169 84.8269 14.0466C84.7907 13.9696 84.7907 13.8926 84.8631 13.854L90.9372 11.1196L92.7089 10.3108C92.7812 10.2723 92.7812 10.2338 92.7812 10.1953C92.2027 7.53783 89.9249 5.57364 87.2493 5.68918C84.4292 5.80472 82.079 8.23107 81.9706 11.2351C81.826 14.5858 84.3207 17.3588 87.4663 17.3588C89.7441 17.3588 91.6965 15.8567 92.5281 13.7385C92.5643 13.6615 92.5281 13.5844 92.4558 13.5844L90.6842 13.2378C90.648 13.2378 90.5757 13.2378 90.5757 13.3149C89.9249 14.4703 88.7317 15.279 87.4301 15.279ZM87.4302 7.80744C88.4787 7.80744 89.4187 8.30812 90.0334 9.07839C90.0696 9.15541 90.0696 9.23244 89.9972 9.27096C89.9972 9.27096 84.14 11.9284 84.0676 11.9669C83.9953 12.0054 83.923 11.9284 83.923 11.8899V11.5818C83.8869 9.46352 85.4777 7.80744 87.4302 7.80744Z" fill="@{blue}"/><path d="M78.6804 0.875H80.4521C80.4882 0.875 80.5605 0.913514 80.5605 0.990541V17.0892C80.5605 17.1662 80.5244 17.2047 80.4521 17.2047H78.6804C78.6081 17.2047 78.572 17.1662 78.572 17.0892V0.990541C78.572 0.913514 78.6081 0.875 78.6804 0.875Z" fill="@{blue}"/><path fill-rule="evenodd" clip-rule="evenodd" d="M62.4102 11.5433C62.4102 8.30813 64.8688 5.68921 67.906 5.68921C70.9431 5.68921 73.4017 8.30813 73.4017 11.5433C73.4017 14.7784 70.9431 17.3973 67.906 17.3973C64.8688 17.3973 62.4102 14.7784 62.4102 11.5433ZM71.4131 11.5433C71.4131 9.50204 69.8584 7.80744 67.9059 7.80744C65.9535 7.80744 64.3988 9.50204 64.3988 11.5433C64.3988 13.5845 65.9897 15.2791 67.9059 15.2791C69.8222 15.2791 71.4131 13.5845 71.4131 11.5433Z" fill="@{blue}"/><path d="M54.3475 10.8115C53.9497 13.1993 55.6491 15.279 57.8184 15.279C58.8669 15.279 59.807 14.8169 60.4216 13.9696C60.4578 13.9311 60.5301 13.9311 60.5663 13.9696L61.8317 15.3176C61.8679 15.3561 61.8679 15.3946 61.8317 15.4331C60.8194 16.5885 59.3731 17.3203 57.7823 17.3203C54.6367 17.3203 52.1419 14.5473 52.2866 11.1966C52.4312 8.23107 54.7452 5.80472 57.5292 5.65066C59.2285 5.57363 60.7832 6.30539 61.8317 7.53782C61.8679 7.57634 61.8679 7.65337 61.8317 7.69188L60.5663 9.03985C60.5301 9.07837 60.4578 9.07837 60.4216 9.03985C59.6262 8.07701 58.3608 7.57634 57.023 7.88445C55.7937 8.15404 54.5644 9.50201 54.3475 10.8115Z" fill="@{blue}"/><path d="M41.9755 5.68921C40.8185 5.68921 39.4807 6.45948 38.8661 7.3838C38.8299 7.46083 38.6853 7.42232 38.6853 7.34529V5.99732C38.6853 5.9588 38.6491 5.88178 38.5768 5.88178H36.8052C36.769 5.88178 36.6967 5.92029 36.6967 5.99732V17.1277C36.6967 17.1662 36.7329 17.2433 36.8052 17.2433H38.5768C38.613 17.2433 38.6853 17.2047 38.6853 17.1277V11.5818C38.6853 9.46353 40.0231 7.96151 41.9393 7.96151C44.4702 7.96151 45.2295 9.73313 45.2295 11.8129V17.1277C45.2295 17.1662 45.2657 17.2433 45.338 17.2433H47.1096C47.1458 17.2433 47.2181 17.2047 47.2181 17.1277V11.8129C47.2542 8.57772 45.808 5.68921 41.9755 5.68921Z" fill="@{blue}"/><path fill-rule="evenodd" clip-rule="evenodd" d="M30.2971 15.279C29.2486 15.279 28.3447 14.8169 27.6939 14.0466C27.6577 13.9696 27.6577 13.8926 27.73 13.854L33.8042 11.1196L35.5759 10.3108C35.6482 10.2723 35.6482 10.2338 35.6482 10.1953C35.0697 7.53783 32.7919 5.57364 30.1163 5.68918C27.2962 5.80472 24.946 8.23107 24.8376 11.2351C24.6929 14.5858 27.1877 17.3588 30.3333 17.3588C32.6111 17.3588 34.5635 15.8567 35.3951 13.7385C35.4312 13.6615 35.3951 13.5844 35.3228 13.5844L33.5511 13.2378C33.515 13.2378 33.4427 13.2378 33.4427 13.3149C32.7919 14.4703 31.6349 15.279 30.2971 15.279ZM30.2971 7.80744C31.3456 7.80744 32.2857 8.30812 32.9003 9.07839C32.9365 9.15541 32.9365 9.23244 32.8642 9.27096C32.8642 9.27096 27.0069 11.9284 26.9346 11.9669C26.8623 12.0054 26.79 11.9284 26.79 11.8899V11.5818C26.79 9.46352 28.3808 7.80744 30.2971 7.80744Z" fill="@{blue}"/><path fill-rule="evenodd" clip-rule="evenodd" d="M15.0755 7.1527C15.8347 6.18986 16.9194 5.61216 18.2933 5.57364C20.9327 5.53513 23.319 7.53783 23.7529 10.3493C24.4037 14.0466 21.7282 17.2817 18.3657 17.2817C16.9194 17.2817 15.7986 16.6655 15.0393 15.7027C14.967 15.6257 14.8585 15.6642 14.8585 15.7797V22.1344C14.8585 22.2115 14.8224 22.25 14.7501 22.25H13.0146C12.9423 22.25 12.9061 22.2115 12.9061 22.1344V5.99729C12.9061 5.92026 12.9423 5.88175 13.0146 5.88175H14.7862C14.8585 5.88175 14.8947 5.92026 14.8947 5.99729V7.07567C14.8947 7.19121 15.0032 7.22972 15.0755 7.1527ZM14.9308 10.8115C14.5331 13.3533 16.594 15.5486 18.9803 15.125C20.4265 14.8554 21.6197 13.6229 21.8366 12.0824C22.2343 9.54051 20.1735 7.34524 17.7872 7.76889C16.3409 7.99997 15.1839 9.27091 14.9308 10.8115Z" fill="@{blue}"/><path fill-rule="evenodd" clip-rule="evenodd" d="M6.39804 5.68921C3.36095 5.68921 0.902344 8.30813 0.902344 11.5433C0.902344 14.7784 3.36095 17.3973 6.39804 17.3973C9.43514 17.3973 11.8937 14.7784 11.8937 11.5433C11.8937 8.30813 9.43514 5.68921 6.39804 5.68921ZM6.39803 7.80744C8.35045 7.80744 9.90516 9.50203 9.90516 11.5432C9.90516 13.5845 8.3143 15.2791 6.39803 15.2791C4.48177 15.2791 2.89091 13.5845 2.89091 11.5432C2.89091 9.50203 4.48177 7.80744 6.39803 7.80744Z" fill="@{blue}"/></svg>');
+         content: url("data:image/svg+xml,@{svg}");
+      }
+      .dApIhL img {
+          @svg: escape('<svg width="1280" height="2175" viewBox="0 0 1280 2175" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="-2361" width="6002" height="5998" rx="2999" fill="@{blue}"/></svg>');
+          background-image: url("data:image/svg+xml,@{svg}");
+      }
+      img[alt="Open Collective"][width="167"][height="28"] {
+          @svg: escape('<svg width="168" height="28" viewBox="0 0 168 28" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M106.727 5H108.459C108.494 5 108.529 5.03604 108.565 5.10811V20.1712C108.565 20.2432 108.529 20.2793 108.459 20.2793H106.727C106.657 20.2793 106.621 20.2432 106.621 20.1712V5.10811C106.621 5.03604 106.657 5 106.727 5ZM140.011 9.68468H141.954C141.99 9.68468 142.06 9.75676 142.06 9.79279V11.5586C142.06 11.6306 142.025 11.6667 141.954 11.6667H140.011C139.976 11.6667 139.94 11.7027 139.94 11.7387V20.1712C139.94 20.2432 139.905 20.2793 139.834 20.2793H138.103C138.032 20.2793 137.997 20.2432 137.997 20.1712V11.7387C137.997 11.7027 137.962 11.6667 137.926 11.6667H136.018C135.948 11.6667 135.912 11.6306 135.912 11.5586V9.79279C135.912 9.72072 135.948 9.68468 136.018 9.68468H137.926C137.962 9.68468 137.997 9.64865 137.997 9.61261V5.10811C137.997 5.03604 138.032 5 138.103 5H139.834C139.905 5 139.94 5.03604 139.94 5.10811V9.61261C139.94 9.64865 139.976 9.68468 140.011 9.68468ZM145.523 6.2973H143.792C143.721 6.2973 143.686 6.33334 143.686 6.40541V8.17118C143.686 8.24325 143.721 8.27928 143.792 8.27928H145.523C145.594 8.27928 145.629 8.24325 145.629 8.17118V6.40541C145.629 6.33334 145.594 6.2973 145.523 6.2973ZM159.727 17.3243C160.363 18.0451 161.246 18.4775 162.271 18.4775C163.578 18.4775 164.709 17.7207 165.345 16.6397C165.345 16.5676 165.415 16.5676 165.451 16.5676L167.182 16.8919C167.253 16.8919 167.288 16.964 167.253 17.036C166.44 19.018 164.532 20.4234 162.306 20.4234C159.232 20.4234 156.794 17.8288 156.935 14.6937C157.041 11.8829 159.338 9.61263 162.094 9.50452C164.709 9.39641 166.935 11.2342 167.5 13.7207C167.5 13.7568 167.5 13.7928 167.429 13.8288L165.698 14.5856L159.762 17.1442C159.691 17.1802 159.691 17.2523 159.727 17.3243ZM164.815 12.6757C164.214 11.955 163.295 11.4865 162.271 11.4865C160.363 11.4865 158.808 13.036 158.843 15.018V15.3063C158.843 15.3424 158.914 15.4144 158.985 15.3784C159.055 15.3424 164.779 12.8559 164.779 12.8559C164.85 12.8198 164.85 12.7478 164.815 12.6757ZM156.688 9.68469H154.992C154.957 9.68469 154.921 9.72073 154.886 9.75676L152.13 18.009C152.059 18.1892 151.847 18.1892 151.777 18.009L149.021 9.75676C149.021 9.72073 148.985 9.68469 148.915 9.68469H147.219C147.148 9.68469 147.113 9.75676 147.113 9.82884L150.611 20.2072C150.611 20.2433 150.646 20.2793 150.717 20.2793H153.119C153.155 20.2793 153.19 20.2433 153.225 20.2072L156.723 9.82884C156.794 9.75676 156.759 9.68469 156.688 9.68469ZM143.792 9.68469H145.523C145.594 9.68469 145.629 9.75676 145.629 9.7928V20.1712C145.629 20.2433 145.594 20.2793 145.523 20.2793H143.792C143.721 20.2793 143.686 20.2433 143.686 20.1712V9.7928C143.686 9.72073 143.721 9.68469 143.792 9.68469ZM130.612 18.4775C128.492 18.4775 126.832 16.5315 127.22 14.2973C127.432 13.0721 128.634 11.8108 129.835 11.5586C131.142 11.2703 132.379 11.7387 133.156 12.6396C133.192 12.6757 133.262 12.6757 133.298 12.6396L134.534 11.3784C134.57 11.3423 134.57 11.2703 134.534 11.2342C133.51 10.0811 131.99 9.39639 130.33 9.46847C127.609 9.61261 125.348 11.8829 125.206 14.6577C125.065 17.7928 127.503 20.3874 130.577 20.3874C132.132 20.3874 133.545 19.7027 134.534 18.6216C134.57 18.5856 134.57 18.5495 134.534 18.5135L133.298 17.2523C133.262 17.2162 133.192 17.2162 133.156 17.2523C132.556 18.045 131.637 18.4775 130.612 18.4775ZM112.239 5H110.508C110.437 5 110.402 5.03604 110.402 5.10811V20.1712C110.402 20.2432 110.437 20.2793 110.508 20.2793H112.239C112.31 20.2793 112.345 20.2432 112.345 20.1712V5.10811C112.345 5.03604 112.275 5 112.239 5ZM86.7287 14.2973C86.3401 16.5315 88.0007 18.4775 90.1207 18.4775C91.1454 18.4775 92.064 18.045 92.6647 17.2523C92.7 17.2162 92.7707 17.2162 92.806 17.2523L94.0427 18.5135C94.078 18.5495 94.078 18.5856 94.0427 18.6216C93.0533 19.7027 91.64 20.3874 90.0854 20.3874C87.0114 20.3874 84.5734 17.7928 84.7147 14.6577C84.8561 11.8829 87.1174 9.61261 89.838 9.46847C91.4987 9.39639 93.018 10.0811 94.0427 11.2342C94.078 11.2703 94.078 11.3423 94.0427 11.3784L92.806 12.6396C92.7707 12.6757 92.7 12.6757 92.6647 12.6396C91.8873 11.7387 90.6507 11.2703 89.3434 11.5586C88.142 11.8108 86.9407 13.0721 86.7287 14.2973ZM74.6383 9.5045C73.5076 9.5045 72.2003 10.2252 71.5997 11.0901C71.5643 11.1622 71.423 11.1261 71.423 11.0541V9.79279C71.423 9.75675 71.3877 9.68468 71.317 9.68468H69.5857C69.5503 9.68468 69.4797 9.72072 69.4797 9.79279V15.018V20.2072C69.4797 20.2432 69.515 20.3153 69.5857 20.3153H71.317C71.3523 20.3153 71.423 20.2793 71.423 20.2072V15.018C71.423 13.036 72.7303 11.6306 74.603 11.6306C77.0763 11.6306 77.8183 13.2883 77.8183 15.2342V20.2072C77.8183 20.2432 77.8536 20.3153 77.9243 20.3153H79.6556C79.6909 20.3153 79.7616 20.2793 79.7616 20.2072V15.2342C79.7969 12.2072 78.3836 9.5045 74.6383 9.5045ZM60.6818 17.3243C61.3178 18.045 62.2011 18.4775 63.2257 18.4775C64.5331 18.4775 65.6637 17.7207 66.2997 16.6396C66.2997 16.5676 66.3704 16.5676 66.4057 16.5676L68.137 16.8919C68.2077 16.8919 68.243 16.964 68.2077 17.036C67.395 19.018 65.4871 20.4234 63.2611 20.4234C60.1871 20.4234 57.7491 17.8288 57.8905 14.6937C57.9965 11.8829 60.2931 9.61261 63.0491 9.5045C65.6637 9.39639 67.8897 11.2342 68.455 13.7207C68.455 13.7568 68.455 13.7928 68.3844 13.8288L66.653 14.5856L60.7171 17.1441C60.6464 17.1802 60.6464 17.2522 60.6818 17.3243ZM119.058 18.4775C118.034 18.4775 117.15 18.045 116.514 17.3243C116.479 17.2522 116.479 17.1802 116.55 17.1441L122.486 14.5856L124.217 13.8288C124.288 13.7928 124.288 13.7568 124.288 13.7207C123.722 11.2342 121.496 9.39639 118.882 9.5045C116.126 9.61261 113.829 11.8829 113.723 14.6937C113.582 17.8288 116.02 20.4234 119.094 20.4234C121.32 20.4234 123.228 19.018 124.04 17.036C124.076 16.964 124.04 16.8919 123.97 16.8919L122.238 16.5676C122.203 16.5676 122.132 16.5676 122.132 16.6396C121.496 17.7207 120.33 18.4775 119.058 18.4775ZM119.058 11.4865C120.083 11.4865 121.002 11.9549 121.602 12.6757C121.638 12.7477 121.638 12.8198 121.567 12.8558C121.567 12.8558 115.843 15.3423 115.772 15.3784C115.702 15.4144 115.631 15.3423 115.631 15.3063V15.018C115.596 13.036 117.15 11.4865 119.058 11.4865ZM94.608 14.982C94.608 11.955 97.0106 9.5045 99.9786 9.5045C102.947 9.5045 105.349 11.955 105.349 14.982C105.349 18.009 102.947 20.4595 99.9786 20.4595C97.0106 20.4595 94.608 18.009 94.608 14.982ZM99.9786 11.4865C101.887 11.4865 103.406 13.0721 103.406 14.982C103.406 16.8919 101.851 18.4775 99.9786 18.4775C98.1059 18.4775 96.5513 16.8919 96.5513 14.982C96.5513 13.0721 98.0706 11.4865 99.9786 11.4865ZM63.2257 11.4865C64.2504 11.4865 65.1691 11.9549 65.7697 12.6757C65.8051 12.7477 65.8051 12.8198 65.7344 12.8558C65.7344 12.8558 60.0104 15.3423 59.9398 15.3784C59.8691 15.4144 59.7984 15.3423 59.7984 15.3063V15.018C59.7984 13.036 61.3531 11.4865 63.2257 11.4865ZM48.3505 10.8739C49.0925 9.97297 50.1525 9.43243 51.4952 9.39639C54.0745 9.36036 56.4065 11.2342 56.8305 13.8649C57.4665 17.3243 54.8518 20.3513 51.5658 20.3513C50.1525 20.3513 49.0572 19.7748 48.3152 18.8739C48.2445 18.8018 48.1385 18.8378 48.1385 18.9459V24.8919C48.1385 24.964 48.1032 25 48.0325 25H46.3366C46.2659 25 46.2306 24.964 46.2306 24.8919V9.79279C46.2306 9.72072 46.2659 9.68468 46.3366 9.68468H48.0679C48.1385 9.68468 48.1739 9.72072 48.1739 9.79279V10.8018C48.1739 10.9099 48.2799 10.9459 48.3505 10.8739ZM48.2092 14.2973C47.8205 16.6757 49.8345 18.7297 52.1665 18.3333C53.5798 18.0811 54.7458 16.9279 54.9578 15.4865C55.3465 13.1081 53.3325 11.054 51.0005 11.4504C49.5872 11.6667 48.4565 12.8558 48.2092 14.2973ZM39.8706 9.5045C36.9026 9.5045 34.5 11.955 34.5 14.982C34.5 18.009 36.9026 20.4595 39.8706 20.4595C42.8386 20.4595 45.2412 18.009 45.2412 14.982C45.2412 11.955 42.8386 9.5045 39.8706 9.5045ZM39.8706 11.4865C41.7786 11.4865 43.2979 13.0721 43.2979 14.982C43.2979 16.8919 41.7433 18.4775 39.8706 18.4775C37.998 18.4775 36.4433 16.8919 36.4433 14.982C36.4433 13.0721 37.998 11.4865 39.8706 11.4865Z" fill="@{blue}"/><path fill-rule="evenodd" clip-rule="evenodd" d="M26.009 6.02649C27.5796 8.28932 28.5 11.037 28.5 14C28.5 16.963 27.5796 19.711 26.009 21.9735L22.3826 18.3471C23.0948 17.0585 23.5001 15.5764 23.5001 14C23.5001 12.4236 23.0948 10.9418 22.3826 9.65324L26.009 6.02649Z" fill="@{sapphire}"/><path fill-rule="evenodd" clip-rule="evenodd" d="M22.4735 2.49111L18.8468 6.11758C17.5582 5.40539 16.0764 5.00002 14.5 5.00002C9.5295 5.00002 5.4999 9.02962 5.4999 14.0001C5.4999 18.9706 9.5295 23.0002 14.5 23.0002C16.0764 23.0002 17.5582 22.5949 18.8468 21.8827L22.4735 25.5091C20.2107 27.0796 17.463 28.0001 14.5 28.0001C6.76808 28.0001 0.5 21.732 0.5 14.0001C0.5 6.26819 6.76808 0.00012207 14.5 0.00012207C17.463 0.00012207 20.2107 0.920596 22.4735 2.49111Z" fill="@{blue}"/></svg>');
+          content: url("data:image/svg+xml,@{svg}");
+      }
+      img[alt="shareBudget icon"][width="50"] {
+          filter: @red-filter;
+      }
+      img[alt="receiveContributions icon"][width="50"] {
+          filter: @text-filter;
+      }
+      img[alt="manageExpenses icon"][width="50"] {
+          filter: @text-filter;
+      }
+      img[alt="engageCommunity icon"][width="50"] {
+          filter: @text-filter;
+      }
+      img[alt="celebrateSupporters icon"][width="50"] {
+          filter: @text-filter;
+      }
+      img[alt="getMonthlyReports icon"][width="50"] {
+          filter: @text-filter;
+      }
+    }
+}
+
+/* deno-fmt-ignore */
+@catppuccin: {
+  @latte:     { @rosewater: #dc8a78; @flamingo: #dd7878; @pink: #ea76cb; @mauve: #8839ef; @red: #d20f39; @maroon: #e64553; @peach: #fe640b; @yellow: #df8e1d; @green: #40a02b; @teal: #179299; @sky: #04a5e5; @sapphire: #209fb5; @blue: #1e66f5; @lavender: #7287fd; @text: #4c4f69; @subtext1: #5c5f77; @subtext0: #6c6f85; @overlay2: #7c7f93; @overlay1: #8c8fa1; @overlay0: #9ca0b0; @surface2: #acb0be; @surface1: #bcc0cc; @surface0: #ccd0da; @base: #eff1f5; @mantle: #e6e9ef; @crust: #dce0e8; };
+  @frappe:    { @rosewater: #f2d5cf; @flamingo: #eebebe; @pink: #f4b8e4; @mauve: #ca9ee6; @red: #e78284; @maroon: #ea999c; @peach: #ef9f76; @yellow: #e5c890; @green: #a6d189; @teal: #81c8be; @sky: #99d1db; @sapphire: #85c1dc; @blue: #8caaee; @lavender: #babbf1; @text: #c6d0f5; @subtext1: #b5bfe2; @subtext0: #a5adce; @overlay2: #949cbb; @overlay1: #838ba7; @overlay0: #737994; @surface2: #626880; @surface1: #51576d; @surface0: #414559; @base: #303446; @mantle: #292c3c; @crust: #232634; };
+  @macchiato: { @rosewater: #f4dbd6; @flamingo: #f0c6c6; @pink: #f5bde6; @mauve: #c6a0f6; @red: #ed8796; @maroon: #ee99a0; @peach: #f5a97f; @yellow: #eed49f; @green: #a6da95; @teal: #8bd5ca; @sky: #91d7e3; @sapphire: #7dc4e4; @blue: #8aadf4; @lavender: #b7bdf8; @text: #cad3f5; @subtext1: #b8c0e0; @subtext0: #a5adcb; @overlay2: #939ab7; @overlay1: #8087a2; @overlay0: #6e738d; @surface2: #5b6078; @surface1: #494d64; @surface0: #363a4f; @base: #24273a; @mantle: #1e2030; @crust: #181926; };
+  @mocha:     { @rosewater: #f5e0dc; @flamingo: #f2cdcd; @pink: #f5c2e7; @mauve: #cba6f7; @red: #f38ba8; @maroon: #eba0ac; @peach: #fab387; @yellow: #f9e2af; @green: #a6e3a1; @teal: #94e2d5; @sky: #89dceb; @sapphire: #74c7ec; @blue: #89b4fa; @lavender: #b4befe; @text: #cdd6f4; @subtext1: #bac2de; @subtext0: #a6adc8; @overlay2: #9399b2; @overlay1: #7f849c; @overlay0: #6c7086; @surface2: #585b70; @surface1: #45475a; @surface0: #313244; @base: #1e1e2e; @mantle: #181825; @crust: #11111b; };
+};
+
+@catppuccin-filters: {
+  @latte: { @rosewater: brightness(0) saturate(100%) invert(65%) sepia(18%) saturate(1048%) hue-rotate(323deg) brightness(92%) contrast(86%); @flamingo: brightness(0) saturate(100%) invert(84%) sepia(44%) saturate(4533%) hue-rotate(310deg) brightness(98%) contrast(75%); @pink: brightness(0) saturate(100%) invert(60%) sepia(32%) saturate(775%) hue-rotate(266deg) brightness(93%) contrast(97%); @mauve: brightness(0) saturate(100%) invert(26%) sepia(59%) saturate(3315%) hue-rotate(255deg) brightness(94%) contrast(100%); @red: brightness(0) saturate(100%) invert(16%) sepia(78%) saturate(7275%) hue-rotate(342deg) brightness(84%) contrast(94%); @maroon: brightness(0) saturate(100%) invert(31%) sepia(56%) saturate(2395%) hue-rotate(331deg) brightness(99%) contrast(82%); @peach: brightness(0) saturate(100%) invert(38%) sepia(81%) saturate(1292%) hue-rotate(356deg) brightness(103%) contrast(99%); @yellow: brightness(0) saturate(100%) invert(74%) sepia(47%) saturate(4570%) hue-rotate(354deg) brightness(95%) contrast(83%); @green: brightness(0) saturate(100%) invert(51%) sepia(25%) saturate(4134%) hue-rotate(76deg) brightness(95%) contrast(66%); @teal: brightness(0) saturate(100%) invert(41%) sepia(45%) saturate(1101%) hue-rotate(139deg) brightness(100%) contrast(82%); @sky: brightness(0) saturate(100%) invert(47%) sepia(76%) saturate(2427%) hue-rotate(166deg) brightness(99%) contrast(97%); @sapphire: brightness(0) saturate(100%) invert(52%) sepia(41%) saturate(6982%) hue-rotate(160deg) brightness(102%) contrast(75%); @blue: brightness(0) saturate(100%) invert(30%) sepia(80%) saturate(1850%) hue-rotate(209deg) brightness(94%) contrast(105%); @lavender: brightness(0) saturate(100%) invert(48%) sepia(61%) saturate(538%) hue-rotate(194deg) brightness(102%) contrast(98%); @text: brightness(0) saturate(100%) invert(30%) sepia(10%) saturate(1259%) hue-rotate(196deg) brightness(97%) contrast(91%); @subtext1: brightness(0) saturate(100%) invert(36%) sepia(10%) saturate(890%) hue-rotate(196deg) brightness(98%) contrast(90%); @subtext0: brightness(0) saturate(100%) invert(47%) sepia(6%) saturate(1263%) hue-rotate(195deg) brightness(90%) contrast(81%); @overlay2: brightness(0) saturate(100%) invert(59%) sepia(7%) saturate(825%) hue-rotate(195deg) brightness(83%) contrast(91%); @overlay1: brightness(0) saturate(100%) invert(59%) sepia(14%) saturate(333%) hue-rotate(194deg) brightness(95%) contrast(89%); @overlay0: brightness(0) saturate(100%) invert(85%) sepia(7%) saturate(595%) hue-rotate(191deg) brightness(77%) contrast(81%); @surface2: brightness(0) saturate(100%) invert(86%) sepia(6%) saturate(482%) hue-rotate(189deg) brightness(82%) contrast(88%); @surface1: brightness(0) saturate(100%) invert(85%) sepia(8%) saturate(281%) hue-rotate(187deg) brightness(92%) contrast(88%); @surface0: brightness(0) saturate(100%) invert(96%) sepia(1%) saturate(5123%) hue-rotate(185deg) brightness(93%) contrast(83%); @base: brightness(0) saturate(100%) invert(89%) sepia(5%) saturate(140%) hue-rotate(182deg) brightness(109%) contrast(94%); @mantle: brightness(0) saturate(100%) invert(93%) sepia(19%) saturate(55%) hue-rotate(182deg) brightness(98%) contrast(92%); @crust: brightness(0) saturate(100%) invert(91%) sepia(1%) saturate(4489%) hue-rotate(196deg) brightness(106%) contrast(82%); };
+  @frappe: { @rosewater: brightness(0) saturate(100%) invert(90%) sepia(6%) saturate(734%) hue-rotate(321deg) brightness(95%) contrast(99%); @flamingo: brightness(0) saturate(100%) invert(88%) sepia(52%) saturate(817%) hue-rotate(293deg) brightness(113%) contrast(84%); @pink: brightness(0) saturate(100%) invert(76%) sepia(15%) saturate(844%) hue-rotate(280deg) brightness(107%) contrast(91%); @mauve: brightness(0) saturate(100%) invert(71%) sepia(25%) saturate(725%) hue-rotate(225deg) brightness(94%) contrast(91%); @red: brightness(0) saturate(100%) invert(67%) sepia(3%) saturate(7209%) hue-rotate(305deg) brightness(91%) contrast(99%); @maroon: brightness(0) saturate(100%) invert(61%) sepia(14%) saturate(957%) hue-rotate(307deg) brightness(109%) contrast(90%); @peach: brightness(0) saturate(100%) invert(68%) sepia(28%) saturate(662%) hue-rotate(335deg) brightness(96%) contrast(94%); @yellow: brightness(0) saturate(100%) invert(94%) sepia(88%) saturate(684%) hue-rotate(309deg) brightness(105%) contrast(80%); @green: brightness(0) saturate(100%) invert(89%) sepia(23%) saturate(582%) hue-rotate(42deg) brightness(87%) contrast(89%); @teal: brightness(0) saturate(100%) invert(91%) sepia(13%) saturate(986%) hue-rotate(110deg) brightness(85%) contrast(81%); @sky: brightness(0) saturate(100%) invert(75%) sepia(15%) saturate(623%) hue-rotate(141deg) brightness(109%) contrast(81%); @sapphire: brightness(0) saturate(100%) invert(77%) sepia(20%) saturate(730%) hue-rotate(157deg) brightness(97%) contrast(76%); @blue: brightness(0) saturate(100%) invert(68%) sepia(16%) saturate(1070%) hue-rotate(185deg) brightness(96%) contrast(95%); @lavender: brightness(0) saturate(100%) invert(75%) sepia(20%) saturate(626%) hue-rotate(201deg) brightness(101%) contrast(89%); @text: brightness(0) saturate(100%) invert(83%) sepia(12%) saturate(582%) hue-rotate(191deg) brightness(98%) contrast(96%); @subtext1: brightness(0) saturate(100%) invert(80%) sepia(18%) saturate(411%) hue-rotate(190deg) brightness(96%) contrast(84%); @subtext0: brightness(0) saturate(100%) invert(82%) sepia(6%) saturate(1287%) hue-rotate(192deg) brightness(86%) contrast(85%); @overlay2: brightness(0) saturate(100%) invert(65%) sepia(36%) saturate(230%) hue-rotate(190deg) brightness(92%) contrast(82%); @overlay1: brightness(0) saturate(100%) invert(55%) sepia(12%) saturate(638%) hue-rotate(189deg) brightness(98%) contrast(87%); @overlay0: brightness(0) saturate(100%) invert(49%) sepia(13%) saturate(662%) hue-rotate(192deg) brightness(94%) contrast(84%); @surface2: brightness(0) saturate(100%) invert(41%) sepia(20%) saturate(469%) hue-rotate(191deg) brightness(93%) contrast(86%); @surface1: brightness(0) saturate(100%) invert(34%) sepia(14%) saturate(771%) hue-rotate(190deg) brightness(89%) contrast(85%); @surface0: brightness(0) saturate(100%) invert(28%) sepia(7%) saturate(1468%) hue-rotate(193deg) brightness(92%) contrast(95%); @base: brightness(0) saturate(100%) invert(20%) sepia(17%) saturate(747%) hue-rotate(192deg) brightness(96%) contrast(97%); @mantle: brightness(0) saturate(100%) invert(8%) sepia(7%) saturate(7271%) hue-rotate(198deg) brightness(88%) contrast(75%); @crust: brightness(0) saturate(100%) invert(7%) sepia(7%) saturate(7415%) hue-rotate(197deg) brightness(86%) contrast(79%); };
+  @macchiato: { @rosewater: brightness(0) saturate(100%) invert(88%) sepia(13%) saturate(322%) hue-rotate(321deg) brightness(102%) contrast(91%); @flamingo: brightness(0) saturate(100%) invert(82%) sepia(3%) saturate(3070%) hue-rotate(314deg) brightness(107%) contrast(88%); @pink: brightness(0) saturate(100%) invert(80%) sepia(23%) saturate(509%) hue-rotate(280deg) brightness(102%) contrast(92%); @mauve: brightness(0) saturate(100%) invert(65%) sepia(18%) saturate(903%) hue-rotate(222deg) brightness(104%) contrast(93%); @red: brightness(0) saturate(100%) invert(61%) sepia(19%) saturate(1541%) hue-rotate(305deg) brightness(110%) contrast(86%); @maroon: brightness(0) saturate(100%) invert(71%) sepia(10%) saturate(1331%) hue-rotate(306deg) brightness(93%) contrast(101%); @peach: brightness(0) saturate(100%) invert(73%) sepia(13%) saturate(1676%) hue-rotate(330deg) brightness(103%) contrast(92%); @yellow: brightness(0) saturate(100%) invert(87%) sepia(89%) saturate(321%) hue-rotate(314deg) brightness(101%) contrast(87%); @green: brightness(0) saturate(100%) invert(93%) sepia(12%) saturate(1128%) hue-rotate(48deg) brightness(92%) contrast(85%); @teal: brightness(0) saturate(100%) invert(92%) sepia(10%) saturate(1176%) hue-rotate(110deg) brightness(87%) contrast(90%); @sky: brightness(0) saturate(100%) invert(78%) sepia(57%) saturate(230%) hue-rotate(142deg) brightness(96%) contrast(84%); @sapphire: brightness(0) saturate(100%) invert(74%) sepia(35%) saturate(438%) hue-rotate(156deg) brightness(92%) contrast(93%); @blue: brightness(0) saturate(100%) invert(67%) sepia(17%) saturate(1007%) hue-rotate(183deg) brightness(99%) contrast(94%); @lavender: brightness(0) saturate(100%) invert(74%) sepia(6%) saturate(2559%) hue-rotate(198deg) brightness(103%) contrast(94%); @text: brightness(0) saturate(100%) invert(81%) sepia(9%) saturate(726%) hue-rotate(192deg) brightness(104%) contrast(92%); @subtext1: brightness(0) saturate(100%) invert(84%) sepia(5%) saturate(1453%) hue-rotate(193deg) brightness(94%) contrast(86%); @subtext0: brightness(0) saturate(100%) invert(75%) sepia(18%) saturate(361%) hue-rotate(190deg) brightness(91%) contrast(86%); @overlay2: brightness(0) saturate(100%) invert(67%) sepia(9%) saturate(814%) hue-rotate(191deg) brightness(92%) contrast(88%); @overlay1: brightness(0) saturate(100%) invert(49%) sepia(38%) saturate(203%) hue-rotate(190deg) brightness(101%) contrast(93%); @overlay0: brightness(0) saturate(100%) invert(46%) sepia(16%) saturate(552%) hue-rotate(193deg) brightness(93%) contrast(84%); @surface2: brightness(0) saturate(100%) invert(34%) sepia(16%) saturate(611%) hue-rotate(192deg) brightness(101%) contrast(87%); @surface1: brightness(0) saturate(100%) invert(30%) sepia(11%) saturate(1085%) hue-rotate(194deg) brightness(92%) contrast(89%); @surface0: brightness(0) saturate(100%) invert(18%) sepia(21%) saturate(880%) hue-rotate(193deg) brightness(97%) contrast(84%); @base: brightness(0) saturate(100%) invert(12%) sepia(42%) saturate(570%) hue-rotate(194deg) brightness(90%) contrast(90%); @mantle: brightness(0) saturate(100%) invert(6%) sepia(6%) saturate(7499%) hue-rotate(200deg) brightness(93%) contrast(85%); @crust: brightness(0) saturate(100%) invert(5%) sepia(8%) saturate(5346%) hue-rotate(202deg) brightness(98%) contrast(88%); };
+  @mocha: { @rosewater: brightness(0) saturate(100%) invert(92%) sepia(5%) saturate(704%) hue-rotate(320deg) brightness(99%) contrast(93%); @flamingo: brightness(0) saturate(100%) invert(81%) sepia(5%) saturate(987%) hue-rotate(315deg) brightness(107%) contrast(90%); @pink: brightness(0) saturate(100%) invert(86%) sepia(11%) saturate(1177%) hue-rotate(283deg) brightness(101%) contrast(92%); @mauve: brightness(0) saturate(100%) invert(65%) sepia(58%) saturate(255%) hue-rotate(224deg) brightness(96%) contrast(102%); @red: brightness(0) saturate(100%) invert(61%) sepia(19%) saturate(997%) hue-rotate(294deg) brightness(104%) contrast(91%); @maroon: brightness(0) saturate(100%) invert(66%) sepia(16%) saturate(1301%) hue-rotate(306deg) brightness(116%) contrast(84%); @peach: brightness(0) saturate(100%) invert(68%) sepia(57%) saturate(278%) hue-rotate(338deg) brightness(98%) contrast(101%); @yellow: brightness(0) saturate(100%) invert(90%) sepia(70%) saturate(380%) hue-rotate(313deg) brightness(102%) contrast(95%); @green: brightness(0) saturate(100%) invert(88%) sepia(6%) saturate(2015%) hue-rotate(63deg) brightness(104%) contrast(78%); @teal: brightness(0) saturate(100%) invert(92%) sepia(12%) saturate(991%) hue-rotate(108deg) brightness(93%) contrast(90%); @sky: brightness(0) saturate(100%) invert(84%) sepia(21%) saturate(1302%) hue-rotate(164deg) brightness(106%) contrast(84%); @sapphire: brightness(0) saturate(100%) invert(74%) sepia(20%) saturate(876%) hue-rotate(156deg) brightness(96%) contrast(93%); @blue: brightness(0) saturate(100%) invert(68%) sepia(18%) saturate(951%) hue-rotate(180deg) brightness(98%) contrast(100%); @lavender: brightness(0) saturate(100%) invert(73%) sepia(7%) saturate(1670%) hue-rotate(195deg) brightness(102%) contrast(99%); @text: brightness(0) saturate(100%) invert(86%) sepia(6%) saturate(879%) hue-rotate(190deg) brightness(100%) contrast(93%); @subtext1: brightness(0) saturate(100%) invert(84%) sepia(19%) saturate(381%) hue-rotate(193deg) brightness(91%) contrast(89%); @subtext0: brightness(0) saturate(100%) invert(84%) sepia(9%) saturate(767%) hue-rotate(192deg) brightness(84%) contrast(84%); @overlay2: brightness(0) saturate(100%) invert(63%) sepia(15%) saturate(428%) hue-rotate(191deg) brightness(96%) contrast(84%); @overlay1: brightness(0) saturate(100%) invert(56%) sepia(15%) saturate(455%) hue-rotate(192deg) brightness(90%) contrast(88%); @overlay0: brightness(0) saturate(100%) invert(44%) sepia(6%) saturate(1275%) hue-rotate(194deg) brightness(97%) contrast(88%); @surface2: brightness(0) saturate(100%) invert(34%) sepia(8%) saturate(1015%) hue-rotate(195deg) brightness(99%) contrast(89%); @surface1: brightness(0) saturate(100%) invert(25%) sepia(6%) saturate(1950%) hue-rotate(197deg) brightness(99%) contrast(86%); @surface0: brightness(0) saturate(100%) invert(19%) sepia(5%) saturate(2844%) hue-rotate(199deg) brightness(91%) contrast(93%); @base: brightness(0) saturate(100%) invert(7%) sepia(4%) saturate(7496%) hue-rotate(202deg) brightness(93%) contrast(87%); @mantle: brightness(0) saturate(100%) invert(6%) sepia(4%) saturate(7465%) hue-rotate(202deg) brightness(95%) contrast(90%); @crust: brightness(0) saturate(100%) invert(3%) sepia(13%) saturate(6863%) hue-rotate(220deg) brightness(95%) contrast(91%); };
+};
