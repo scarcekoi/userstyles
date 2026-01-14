@@ -73,6 +73,7 @@ collaborators:
   - &ImenaOphelia ImenaOphelia
   - &koibtw koibtw
   - &TheAnonymousCrusher TheAnonymousCrusher
+  - &scarcekoi scarcekoi
 
 userstyles:
   advent-of-code:
@@ -1008,6 +1009,12 @@ userstyles:
     color: red
     current-maintainers: [*isabelroses, *uncenter]
     past-maintainers: [*elkrien]
+  yubal:
+    name: yubal
+    link: https://github.com/guillevc/yubal
+    categories: [productivity]
+    color: green
+    current-maintainers: [*scarcekoi]
   zen-browser-docs:
     name: Zen Browser Docs
     link: https://zen-browser.app
