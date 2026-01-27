@@ -294,6 +294,12 @@ userstyles:
     categories: [social_networking]
     color: peach
     current-maintainers: [*ryanccn]
+  fedex:
+    name: FedEx
+    link: https://fedex.com
+    categories: [productivity]
+    color: mauve
+    current-maintainers: [*scarcekoi]
   freedesktop:
     name: freedesktop.org
     link: https://www.freedesktop.org
