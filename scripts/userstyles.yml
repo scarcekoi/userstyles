@@ -74,6 +74,7 @@ collaborators:
   - &ImenaOphelia ImenaOphelia
   - &koibtw koibtw
   - &TheAnonymousCrusher TheAnonymousCrusher
+  - &scarcekoi scarcekoi
 
 userstyles:
   advent-of-code:
@@ -569,6 +570,13 @@ userstyles:
     icon: musicbrainz
     color: peach
     current-maintainers: [*00dani]
+  liveschool:
+    name: Liveschool
+    link: https://liveschoolapp.com
+    categories: [education]
+    icon: liveschool
+    color: blue
+    current-maintainers: [*scarcekoi]
   lobste.rs:
     name: Lobsters
     link: https://lobste.rs
