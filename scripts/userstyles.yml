@@ -74,6 +74,7 @@ collaborators:
   - &ImenaOphelia ImenaOphelia
   - &koibtw koibtw
   - &TheAnonymousCrusher TheAnonymousCrusher
+  - &scarcekoi scarcekoi
 
 userstyles:
   advent-of-code:
@@ -576,6 +577,13 @@ userstyles:
     icon: lobsters
     color: red
     current-maintainers: [*steinuil]
+  mango-languages:
+    name: Mango Languages
+    link: https://www.mangolanguages.com
+    categories: [education]
+    icon: mango-languages
+    color: mauve
+    current-maintainers: [*scarcekoi]
   mastodon:
     name: Mastodon
     link: https://github.com/mastodon/mastodon
