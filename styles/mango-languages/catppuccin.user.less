@@ -37,5 +37,35 @@
   #catppuccin(@flavor) {
     #lib.palette();
     #lib.defaults();
+
+    * {
+      border-color: @overlay0;
+    }
+
+    .button-0-2-410:hover .mainCircleComplete-0-2-421 {
+      background: lighten(@green, 5%);
+    }
+    .cornerCircleRight-0-2-412, .mainCircleComplete-0-2-421 {
+      background: @green;
+    }
+    element {
+    }
+    .chartLinkNewTag-0-2-274 {
+      color: @base;
+      background: @green;
+    }
+    element {
+    }
+    .cornerCircleLeft-0-2-411 {
+      color: @base;
+      background: @mauve;
+    }
+
+    path[fill="#008531"] {
+      fill: @green;
+    }
+    path[fill="white"] {
+      fill: @base;
+    }
   }
 }
