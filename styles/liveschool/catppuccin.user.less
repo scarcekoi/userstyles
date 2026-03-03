@@ -930,7 +930,7 @@
     }
 
     .dropdown-button[data-v-6f0a226d] {
-        border: 1px solid #3b6fc8;
+        border: 1px solid @blue;
         box-sizing: border-box;
         border-radius: 4px;
         height: 41px;
@@ -1634,7 +1634,7 @@
     }
 
     .active {
-        color: #3b6fc8;
+        color: @blue;
         background-color: var(--swatch_blue_mid_lightest)
     }
 
@@ -2917,7 +2917,7 @@
         --swatch_blue_darkest: #315176;
         --swatch_blue_darker: #2f5aa0;
         --swatch_blue_dark: #3565b4;
-        --swatch_blue: #3b6fc8;
+        --swatch_blue: @blue;
         --swatch_blue_light: #4f7fce;
         --swatch_blue_lighter: #628dd3;
         --swatch_blue_mid_darker: #769bd9;
@@ -2947,7 +2947,7 @@
         --swatch_green_mid_lightest: #c2ecc2;
         --swatch_red_darker: #9f3636;
         --swatch_red_dark: #b63e3e;
-        --swatch_red: #e44d4d;
+        --swatch_red: @red;
         --swatch_red_light: #e75f5f;
         --swatch_red_lighter: #e97171;
         --swatch_red_mid_darker: #ec8282;
@@ -3666,7 +3666,7 @@
           margin-top: 10px;
         }
         :root .dropdown-button[data-v-6f0a226d] {
-          border: 1px solid #3b6fc8;
+          border: 1px solid @blue;
           box-sizing: border-box;
           border-radius: 4px;
           height: 41px;
@@ -4063,15 +4063,8 @@
           z-index: 1;
         }
         :root .underlay-background {
-          background-image: url(../img/background.abb85753.svg);
-          height: 670px;
-          position: absolute;
-          top: 0;
-          width: 100%;
-          z-index: 0;
-          pointer-events: none;
-          background-repeat: no-repeat;
-          background-size: cover;
+          @svg: escape('<svg width="1440" height="1024" viewBox="0 0 1440 1024" fill="none" xmlns="http://www.w3.org/2000/svg"><g opacity="0.5"><g clip-path="url(#clip0_4_7743)"><g opacity="0.4"><g opacity="0.6" filter="url(#filter0_f_4_7743)"><path d="M1019.8 -54.722C969.738 -45.9247 930.592 -22.6401 915.048 5.76671C899.949 33.3592 914.623 62.4723 942.43 86.6731C969.963 110.636 1010.75 130.48 1060.99 132.784C1110.15 135.038 1152.95 117.889 1187.49 97.9102C1222.08 77.9094 1252.64 53.2204 1246.68 25.4007C1240.7 -2.44563 1200.51 -22.1998 1158.55 -37.0193C1116.2 -51.9744 1067.44 -63.0933 1019.8 -54.722Z" fill="url(#paint0_linear_4_7743)"/></g><g opacity="0.9" filter="url(#filter1_f_4_7743)"><path d="M723.072 -222.412C652.378 -210.959 613.095 -169.156 573.408 -131.725C536.259 -96.6886 499.957 -59.9137 506.777 -18.4127C514.024 25.6753 553.082 65.4699 610.312 92.8213C670.407 121.541 745.395 137.488 821.219 131.863C900.468 125.983 980.252 104.023 1021.34 62.328C1060.46 22.6226 1035.59 -25.8117 1021.42 -71.3089C1007.7 -115.394 998.946 -162.806 942.302 -191.494C882.344 -221.861 798.43 -234.622 723.072 -222.412Z" fill="url(#paint1_linear_4_7743)"/></g><g filter="url(#filter2_f_4_7743)"><path opacity="0.6" d="M542.877 -69.9185C503.932 -68.1799 464.085 -49.7537 447.885 -21.0255C433.064 5.25753 455.396 33.9265 469.32 60.5302C478.816 78.6707 492.851 94.404 513.655 104.629C532.435 113.859 554.302 111.583 576.196 113.06C610.274 115.358 647.98 132.641 674.833 115.499C703.604 97.1319 709.602 61.7763 701.974 32.7624C694.698 5.09798 664.034 -11.8238 636.716 -29.4552C607.907 -48.0471 579.664 -71.5612 542.877 -69.9185Z" fill="#0500FF"/></g><g opacity="0.9" filter="url(#filter3_f_4_7743)"><path opacity="0.6" d="M339.407 -97.8942C283.144 -82.8305 230.686 -44.5443 215.869 0.198627C202.317 41.1342 243.67 73.2542 272.136 105.272C291.546 127.108 316.84 144.155 350.313 151.433C380.531 158.002 411.72 147.758 444.101 142.66C494.502 134.727 554.79 146.201 588.692 113.909C625.016 79.309 622.923 28.7816 602.9 -8.59828C583.808 -44.2388 533.9 -57.5078 488.657 -72.8404C440.945 -89.0084 392.548 -112.123 339.407 -97.8942Z" fill="url(#paint2_linear_4_7743)"/></g></g></g></g><defs><filter id="filter0_f_4_7743" x="769" y="-197.598" width="618.425" height="470.582" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur stdDeviation="70" result="effect1_foregroundBlur_4_7743"/></filter><filter id="filter1_f_4_7743" x="305.946" y="-427.004" width="936.404" height="759.987" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur stdDeviation="100" result="effect1_foregroundBlur_4_7743"/></filter><filter id="filter2_f_4_7743" x="283" y="-230" width="582" height="513" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur stdDeviation="80" result="effect1_foregroundBlur_4_7743"/></filter><filter id="filter3_f_4_7743" x="13.2157" y="-302.334" width="803.958" height="655.899" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur stdDeviation="100" result="effect1_foregroundBlur_4_7743"/></filter><linearGradient id="paint0_linear_4_7743" x1="1012.46" y1="9.66594" x2="1357.49" y2="165.138" gradientUnits="userSpaceOnUse"><stop stop-color="@{rosewater}"/><stop offset="1" stop-color="@{peach}"/></linearGradient><linearGradient id="paint1_linear_4_7743" x1="731.257" y1="-17.5943" x2="1179.59" y2="186.149" gradientUnits="userSpaceOnUse"><stop stop-color="@{pink}"/><stop offset="1" stop-color="@{yellow}"/></linearGradient><linearGradient id="paint2_linear_4_7743" x1="257.683" y1="40.5616" x2="533.405" y2="17.3634" gradientUnits="userSpaceOnUse"><stop stop-color="@{teal}"/><stop offset="1" stop-color="@{blue}"/></linearGradient><clipPath id="clip0_4_7743"><rect width="1440" height="670" fill="@{base}" transform="matrix(-1 0 0 1 1440 0)"/></clipPath></defs></svg>');
+          background-image: url("data:image/svg+xml,@{svg}");
         }
         :root .studentName {
           font-weight: 700;
@@ -4125,7 +4118,7 @@
           cursor: pointer;
         }
         :root .active {
-          color: #3b6fc8;
+          color: @blue;
           background-color: var(--swatch_blue_mid_lightest);
         }
         :root .inactive {
@@ -5147,7 +5140,7 @@
           --swatch_blue_darkest: #315176;
           --swatch_blue_darker: #2f5aa0;
           --swatch_blue_dark: #3565b4;
-          --swatch_blue: #3b6fc8;
+          --swatch_blue: @blue;
           --swatch_blue_light: #4f7fce;
           --swatch_blue_lighter: #628dd3;
           --swatch_blue_mid_darker: #769bd9;
@@ -5177,7 +5170,7 @@
           --swatch_green_mid_lightest: #c2ecc2;
           --swatch_red_darker: #9f3636;
           --swatch_red_dark: #b63e3e;
-          --swatch_red: #e44d4d;
+          --swatch_red: @red;
           --swatch_red_light: #e75f5f;
           --swatch_red_lighter: #e97171;
           --swatch_red_mid_darker: #ec8282;
@@ -6041,7 +6034,7 @@
           margin-top: 10px;
         }
         :root .dropdown-button[data-v-6f0a226d] {
-          border: 1px solid #3b6fc8;
+          border: 1px solid @blue;
           box-sizing: border-box;
           border-radius: 4px;
           height: 41px;
@@ -6500,7 +6493,7 @@
           cursor: pointer;
         }
         :root .active {
-          color: #3b6fc8;
+          color: @blue;
           background-color: var(--swatch_blue_mid_lightest);
         }
         :root .inactive {
@@ -7522,7 +7515,7 @@
           --swatch_blue_darkest: #315176;
           --swatch_blue_darker: #2f5aa0;
           --swatch_blue_dark: #3565b4;
-          --swatch_blue: #3b6fc8;
+          --swatch_blue: @blue;
           --swatch_blue_light: #4f7fce;
           --swatch_blue_lighter: #628dd3;
           --swatch_blue_mid_darker: #769bd9;
@@ -7552,7 +7545,7 @@
           --swatch_green_mid_lightest: #c2ecc2;
           --swatch_red_darker: #9f3636;
           --swatch_red_dark: #b63e3e;
-          --swatch_red: #e44d4d;
+          --swatch_red: @red;
           --swatch_red_light: #e75f5f;
           --swatch_red_lighter: #e97171;
           --swatch_red_mid_darker: #ec8282;
@@ -8420,7 +8413,7 @@
         margin-top: 10px;
       }
       :root[data-theme="dark"] .dropdown-button[data-v-6f0a226d] {
-        border: 1px solid #3b6fc8;
+        border: 1px solid @blue;
         box-sizing: border-box;
         border-radius: 4px;
         height: 41px;
@@ -9043,7 +9036,7 @@
         cursor: pointer;
       }
       :root[data-theme="dark"] .active {
-        color: #3b6fc8;
+        color: @blue;
         background-color: var(--swatch_blue_mid_lightest);
       }
       :root[data-theme="dark"] .inactive {
@@ -10100,7 +10093,7 @@
         --swatch_blue_darkest: #315176;
         --swatch_blue_darker: #2f5aa0;
         --swatch_blue_dark: #3565b4;
-        --swatch_blue: #3b6fc8;
+        --swatch_blue: @blue;
         --swatch_blue_light: #4f7fce;
         --swatch_blue_lighter: #628dd3;
         --swatch_blue_mid_darker: #769bd9;
@@ -10130,7 +10123,7 @@
         --swatch_green_mid_lightest: #c2ecc2;
         --swatch_red_darker: #9f3636;
         --swatch_red_dark: #b63e3e;
-        --swatch_red: #e44d4d;
+        --swatch_red: @red;
         --swatch_red_light: #e75f5f;
         --swatch_red_lighter: #e97171;
         --swatch_red_mid_darker: #ec8282;
@@ -10793,7 +10786,7 @@
         margin-top: 10px;
       }
       :root[data-theme="light"] .dropdown-button[data-v-6f0a226d] {
-        border: 1px solid #3b6fc8;
+        border: 1px solid @blue;
         box-sizing: border-box;
         border-radius: 4px;
         height: 41px;
@@ -11416,7 +11409,7 @@
         cursor: pointer;
       }
       :root[data-theme="light"] .active {
-        color: #3b6fc8;
+        color: @blue;
         background-color: var(--swatch_blue_mid_lightest);
       }
       :root[data-theme="light"] .inactive {
@@ -12473,7 +12466,7 @@
         --swatch_blue_darkest: #315176;
         --swatch_blue_darker: #2f5aa0;
         --swatch_blue_dark: #3565b4;
-        --swatch_blue: #3b6fc8;
+        --swatch_blue: @blue;
         --swatch_blue_light: #4f7fce;
         --swatch_blue_lighter: #628dd3;
         --swatch_blue_mid_darker: #769bd9;
@@ -12503,7 +12496,7 @@
         --swatch_green_mid_lightest: #c2ecc2;
         --swatch_red_darker: #9f3636;
         --swatch_red_dark: #b63e3e;
-        --swatch_red: #e44d4d;
+        --swatch_red: @red;
         --swatch_red_light: #e75f5f;
         --swatch_red_lighter: #e97171;
         --swatch_red_mid_darker: #ec8282;
