@@ -18,6 +18,15 @@
 @import "https://userstyles.catppuccin.com/lib/lib.less";
 
 @-moz-document domain("khanacademy.org") {
+  :root {
+    @media (prefers-color-scheme: light) {
+      #catppuccin(@lightFlavor);
+    }
+    @media (prefers-color-scheme: dark) {
+      #catppuccin(@darkFlavor);
+    }
+  }
+
   #catppuccin(@flavor) {
     #lib.palette();
     #lib.defaults();
