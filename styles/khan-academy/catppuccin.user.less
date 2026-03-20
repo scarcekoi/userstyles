@@ -32,7 +32,7 @@
     #lib.defaults();
 
     --wb-semanticColor-core-border-instructive-subtle: #b5cefb;
-    --wb-semanticColor-core-border-instructive-default: #1865f2;
+    --wb-semanticColor-core-border-instructive-default: @accent;
     --wb-semanticColor-core-border-instructive-strong: #1b50b3;
     --wb-semanticColor-core-border-neutral-subtle: #dbdcdd;
     --wb-semanticColor-core-border-neutral-default: #909296;
@@ -50,15 +50,15 @@
     --wb-semanticColor-core-border-disabled-strong: #b8b9bb;
     --wb-semanticColor-core-border-knockout-default: #fff;
 
-    --wb-semanticColor-core-background-base-subtle: #f7f8fa;
-    --wb-semanticColor-core-background-base-default: #fff;
-    --wb-semanticColor-core-background-base-strong: #0b2149;
-    --wb-semanticColor-core-background-instructive-subtle: #edf3fe;
-    --wb-semanticColor-core-background-instructive-default: #1865f2;
+    --wb-semanticColor-core-background-base-subtle: @mantle !important;
+    --wb-semanticColor-core-background-base-default: @base;
+    --wb-semanticColor-core-background-base-strong: @mantle;
+    --wb-semanticColor-core-background-instructive-subtle: fade(@accent, 20%);
+    --wb-semanticColor-core-background-instructive-default: @accent;
     --wb-semanticColor-core-background-instructive-strong: #1b50b3;
     --wb-semanticColor-core-background-neutral-subtle: #ededee;
     --wb-semanticColor-core-background-neutral-default: #5f6167;
-    --wb-semanticColor-core-background-neutral-strong: #21242c;
+    --wb-semanticColor-core-background-neutral-strong: @text;
     --wb-semanticColor-core-background-critical-subtle: #fceeec;
     --wb-semanticColor-core-background-critical-default: #d92916;
     --wb-semanticColor-core-background-critical-strong: #9e271d;
@@ -73,11 +73,11 @@
     --wb-semanticColor-core-background-overlay-default: rgba(33,36,44,.5);
 
     --wb-semanticColor-core-foreground-instructive-subtle: #b5cefb;
-    --wb-semanticColor-core-foreground-instructive-default: #1865f2;
-    --wb-semanticColor-core-foreground-instructive-strong: #1b50b3;
-    --wb-semanticColor-core-foreground-neutral-subtle: #717378;
-    --wb-semanticColor-core-foreground-neutral-default: #5f6167;
-    --wb-semanticColor-core-foreground-neutral-strong: #21242c;
+    --wb-semanticColor-core-foreground-instructive-default: @accent;
+    --wb-semanticColor-core-foreground-instructive-strong: @accent;
+    --wb-semanticColor-core-foreground-neutral-subtle: @subtext1;
+    --wb-semanticColor-core-foreground-neutral-default: @subtext0;
+    --wb-semanticColor-core-foreground-neutral-strong: @text;
     --wb-semanticColor-core-foreground-critical-subtle: #f3bbb4;
     --wb-semanticColor-core-foreground-critical-default: #d92916;
     --wb-semanticColor-core-foreground-critical-strong: #9e271d;
@@ -92,14 +92,14 @@
     --wb-semanticColor-core-foreground-disabled-strong: #909296;
     --wb-semanticColor-core-foreground-knockout-default: #fff;
 
-    --wb-semanticColor-action-primary-progressive-default-background: #1865f2;
-    --wb-semanticColor-action-primary-progressive-default-foreground: #fff;
-    --wb-semanticColor-action-primary-progressive-hover-border: #1865f2;
-    --wb-semanticColor-action-primary-progressive-hover-background: #1865f2;
-    --wb-semanticColor-action-primary-progressive-hover-foreground: #fff;
-    --wb-semanticColor-action-primary-progressive-press-border: #1b50b3;
-    --wb-semanticColor-action-primary-progressive-press-background: #1b50b3;
-    --wb-semanticColor-action-primary-progressive-press-foreground: #fff;
+    --wb-semanticColor-action-primary-progressive-default-background: @accent;
+    --wb-semanticColor-action-primary-progressive-default-foreground: @base;
+    --wb-semanticColor-action-primary-progressive-hover-border: @accent;
+    --wb-semanticColor-action-primary-progressive-hover-background: @accent;
+    --wb-semanticColor-action-primary-progressive-hover-foreground: @base;
+    --wb-semanticColor-action-primary-progressive-press-border: @accent;
+    --wb-semanticColor-action-primary-progressive-press-background: @accent;
+    --wb-semanticColor-action-primary-progressive-press-foreground: @base;
 
     --wb-semanticColor-action-primary-destructive-default-background: #d92916;
     --wb-semanticColor-action-primary-destructive-default-foreground: #fff;
@@ -124,12 +124,12 @@
 
     --wb-semanticColor-feedback-info-subtle-background: #edf3fe;
     --wb-semanticColor-feedback-info-subtle-border: #b5cefb;
-    --wb-semanticColor-feedback-info-subtle-icon: #1865f2;
+    --wb-semanticColor-feedback-info-subtle-icon: @accent;
     --wb-semanticColor-feedback-info-subtle-text: #21242c;
     --wb-semanticColor-feedback-info-strong-background: #21242c;
     --wb-semanticColor-feedback-info-strong-border: #5f6167;
     --wb-semanticColor-feedback-info-strong-text: #fff;
-    --wb-semanticColor-feedback-info-strong-icon: #1865f2;
+    --wb-semanticColor-feedback-info-strong-icon: @accent;
 
     --wb-semanticColor-feedback-success-subtle-background: #ebf8ec;
     --wb-semanticColor-feedback-success-subtle-border: #c2eac5;
@@ -167,10 +167,10 @@
     --wb-semanticColor-feedback-neutral-strong-text: #fff;
     --wb-semanticColor-feedback-neutral-strong-icon: #717378;
 
-    --wb-semanticColor-focus-outer: #1865f2;
+    --wb-semanticColor-focus-outer: @accent;
     --wb-semanticColor-focus-inner: #fff;
-    --wb-semanticColor-link-rest: #1865f2;
-    --wb-semanticColor-link-hover: #1865f2;
+    --wb-semanticColor-link-rest: @accent;
+    --wb-semanticColor-link-hover: @accent;
     --wb-semanticColor-link-press: #1b50b3;
     --wb-semanticColor-link-disabled: #b8b9bb;
     --wb-semanticColor-khanmigo-primary: #5f1e5c;
@@ -184,7 +184,7 @@
     --wb-semanticColor-status-success-background: #ebf8ec;
     --wb-semanticColor-status-success-foreground: #00a60e;
     --wb-semanticColor-status-notice-background: #edf3fe;
-    --wb-semanticColor-status-notice-foreground: #1865f2;
+    --wb-semanticColor-status-notice-foreground: @accent;
     --wb-semanticColor-status-neutral-background: #ededee;
     --wb-semanticColor-status-neutral-foreground: #21242c;
 
@@ -192,11 +192,11 @@
     --wb-semanticColor-input-default-background: #fff;
     --wb-semanticColor-input-default-foreground: #21242c;
     --wb-semanticColor-input-default-placeholder: #5f6167;
-    --wb-semanticColor-input-checked-border: #1865f2;
-    --wb-semanticColor-input-checked-background: #1865f2;
+    --wb-semanticColor-input-checked-border: @accent;
+    --wb-semanticColor-input-checked-background: @accent;
     --wb-semanticColor-input-checked-foreground: #fff;
     --wb-semanticColor-input-disabled-border: #dbdcdd;
-    --wb-semanticColor-input-disabled-background: #f7f8fa;
+    --wb-semanticColor-input-disabled-background: @mantle !important;
     --wb-semanticColor-input-disabled-foreground: #5f6167;
     --wb-semanticColor-input-disabled-placeholder: #5f6167;
     --wb-semanticColor-input-error-border: #d92916;
@@ -205,7 +205,7 @@
     --wb-semanticColor-input-readOnly-background: #fff;
     --wb-semanticColor-input-readOnly-text: #21242c;
 
-    ~"@layer legacy" {
+    @layer legacy {
       .avatar-customizer {
         color: #21242c;
       }
@@ -308,10 +308,10 @@
         color: #999;
       }
       .sidenote.success {
-        background-image: url(images/34c660e064c3bed7-video-indicator-complete.png);
+        background-image: url("images/34c660e064c3bed7-video-indicator-complete.png");
       }
       .sidenote.error {
-        background-image: url(images/c2f3f42d4a946c2e-cross.png);
+        background-image: url("images/c2f3f42d4a946c2e-cross.png");
       }
       #nav-container .user-info-container .user-info,
       .nav-bar .user-info-container .user-info {
@@ -429,25 +429,25 @@
         color: #9db63b;
       }
       a[rel="community supporters"] {
-        background: url(images/433547628a80ca8c-supporters.png) 7px no-repeat;
+        background: url("images/433547628a80ca8c-supporters.png") 7px no-repeat;
       }
       .badge-bronze-img-small {
-        background-image: url(images/86fb03a065d69d3c-meteorite-small.png);
+        background-image: url("images/86fb03a065d69d3c-meteorite-small.png");
       }
       .badge-silver-img-small {
-        background-image: url(images/101dded2e8338832-moon-small.png);
+        background-image: url("images/101dded2e8338832-moon-small.png");
       }
       .badge-gold-img-small {
-        background-image: url(images/998a03825ec956fa-earth-small.png);
+        background-image: url("images/998a03825ec956fa-earth-small.png");
       }
       .badge-diamond-img-small {
-        background-image: url(images/ef5234d92d438910-sun-small.png);
+        background-image: url("images/ef5234d92d438910-sun-small.png");
       }
       .badge-platinum-img-small {
-        background-image: url(images/82110aa4c173fbfd-eclipse-small.png);
+        background-image: url("images/82110aa4c173fbfd-eclipse-small.png");
       }
       .badge-master-img-small {
-        background-image: url(images/9cd8eb34517f0b63-master-challenge-blue-small.png);
+        background-image: url("images/9cd8eb34517f0b63-master-challenge-blue-small.png");
       }
       .user-summary-view__points-and-badges .energy-points-container .energy-points-badge {
         background-color: #00b0de;
@@ -466,6 +466,18 @@
 
     .rich-text-editor blockquote {
       border-left-color: #ccc;
+    }
+
+    [fill="#1865f2"] {
+      fill: @accent;
+    }
+
+    [fill="#F56B0F"] {
+      fill: @peach;
+    }
+
+    [fill="#ffb100"] {
+      fill: @yellow;
     }
   }
 }
