@@ -41,7 +41,7 @@
     --wb-semanticColor-core-border-critical-default: #d92916;
     --wb-semanticColor-core-border-critical-strong: #9e271d;
     --wb-semanticColor-core-border-success-subtle: #c2eac5;
-    --wb-semanticColor-core-border-success-default: #00a60e;
+    --wb-semanticColor-core-border-success-default: @green;
     --wb-semanticColor-core-border-success-strong: #0b7c18;
     --wb-semanticColor-core-border-warning-subtle: #ffecc2;
     --wb-semanticColor-core-border-warning-default: #ffb100;
@@ -64,7 +64,7 @@
     --wb-semanticColor-core-background-critical-strong: #9e271d;
     --wb-semanticColor-core-background-success-subtle: #ebf8ec;
     --wb-semanticColor-core-background-success-default: #00a60e;
-    --wb-semanticColor-core-background-success-strong: #0b7c18;
+    --wb-semanticColor-core-background-success-strong: @green;
     --wb-semanticColor-core-background-warning-subtle: #fff9eb;
     --wb-semanticColor-core-background-warning-default: #ffb100;
     --wb-semanticColor-core-background-warning-strong: #b8840e;
@@ -399,10 +399,10 @@
       }
       .nav-bar .breadcrumbs_nav a.selected,
       .nav-bar .breadcrumbs_nav a:hover {
-        border-bottom-color: #76a005;
+        border-bottom-color: @green;
       }
       .nav-bar .breadcrumbs_nav a:hover {
-        color: #76a005;
+        color: @green;
       }
       .nav-bar .breadcrumbs_nav a.selected {
         background-color: #fff;
@@ -478,6 +478,10 @@
 
     [fill="#ffb100"] {
       fill: @yellow;
+    }
+
+    [style*="color: rgb(82, 111, 3);"] {
+      color: @green;
     }
   }
 }
