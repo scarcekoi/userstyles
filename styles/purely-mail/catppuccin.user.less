@@ -20,10 +20,12 @@
 @-moz-document url-prefix("https://inbox.purelymail.com") {
   html.dark-mode {
     #catppuccin(@darkFlavor);
+    scrollbar-color:@blue @surface0;
   }
 
-  html:not(.dark-mode) {
+  html {
     #catppuccin(@lightFlavor);
+    scrollbar-color:@blue @surface0;
   }
 
   #catppuccin(@flavor) {
@@ -31,13 +33,10 @@
     #lib.defaults();
 
     a {
-      color:#00acff
+      color:@blue
     }
     a:hover {
-      color:#008acc
-    }
-    html {
-      scrollbar-color:#c1c1c1 #f1f1f1
+      color:@sky
     }
     html:not(.touch) ::-webkit-scrollbar-track {
       background-color:#f1f1f1
@@ -46,54 +45,57 @@
       background-color:#c1c1c1
     }
     body {
-      color:#2c363a;
+      color:@text;
+    }
+    > body {
+      background-color: @base;
     }
     #layout>div>.header {
       border-bottom-color:#d4dbde;
-      color:#2c363a;
-      background-color:#f4f4f4
+      color:@text;
+      background-color:@base
     }
     #layout>div>.header a.button {
-      color:#2c363a
+      color:@text
     }
     #layout>div>.footer {
       border-top-color:#d4dbde;
-      background-color:#fff
+      background-color:@base
     }
     #layout-sidebar {
       border-right-color:#d4dbde;
-      background-color:#fff
+      background-color:@base
     }
     #layout-sidebar.sidebar-right {
       border-left-color:#d4dbde;
     }
     #layout-list {
       border-right-color:#d4dbde;
-      background-color:#fff
+      background-color:@base
     }
     #layout-content {
-      background-color:#fff;
+      background-color:@base;
     }
     @media screen and (min-width:481px) {
       #layout-menu .popover-header {
-        background-color:#2f3a3f!important
+        background-color:@crust!important
       }
     }
     @media screen and (max-width:768px) {
       #layout>div>.header {
-        background-color:#f4f4f4
+        background-color:@base
       }
       #layout>div>.footer {
-        background-color:#f4f4f4
+        background-color:@base
       }
     }
     @media screen and (min-width:481px) {
       #layout-menu {
-        background-color:#2f3a3f;
+        background-color:@crust;
       }
     }
     #rcmdraglayer {
-      background-color:#2f3a3f;
+      background-color:@crust;
       color:#fff;
     }
     .popup .listbox .footer {
@@ -126,11 +128,11 @@
       color:#737677
     }
     .quota-widget .bar {
-      background-color:#fff;
+      background-color:@base;
       border-color:#d4dbde;
     }
     .quota-widget .value {
-      background-color:#37beff;
+      background-color:@blue;
     }
     .quota-widget .value.warning {
       background-color:#ff5552
@@ -159,87 +161,93 @@
       border-bottom-color:#d4dbde
     }
     .table-widget table.options-table tr.selected td {
-      background-color:#ebf9ff;
-      color:#2c363a;
+      background-color:@surface0;
+      color:@text;
     }
     table.table tr.deleted td {
       color:rgba(44,54,58,.5)!important
     }
     .floating-action-buttons a.button {
-      background-color:#37beff;
+      background-color:@blue;
       color:#fff;
     }
     .btn-link {
-      color:#00acff
+      color:@blue
+    }
+    .btn:hover {
+      color: @sky
     }
     .btn-secondary {
-      color:#fff;
-      background-color:#8b9fa7;
-      border-color:#8b9fa7
+      color:@text;
+      background-color:@mantle;
+      border-color:@mantle
     }
     .btn-secondary:focus {
-      background-color:#7c939c;
-      border-color:#778e98;
+      background-color:@surface0;
+      border-color:@surface0;
     }
     .btn-secondary:hover {
-      background-color:#7c939c;
-      border-color:#778e98
+      background-color:@surface0 !important;
+      border-color:@surface0
     }
     .btn-secondary.disabled,
     .btn-secondary:disabled {
-      background-color:#8b9fa7;
-      border-color:#8b9fa7
+      background-color:@mantle;
+      border-color:@mantle
     }
     .btn-secondary:not(:disabled):not(.disabled).active,
     .btn-secondary:not(:disabled):not(.disabled):active {
-      background-color:#6e8791;
-      border-color:#6a828b
+      background-color:@surface1;
+      border-color:@surface1
     }
     .btn-primary {
-      color:#fff;
-      background-color:#37beff;
-      border-color:#37beff
+      color:@base !important;
+      background-color:@accent;
+      border-color:@accent
     }
     .btn-primary:focus {
-      background-color:#1eb6ff;
-      border-color:#13b2ff;
+      background-color:lighten(@accent, 5%);
+      border-color:lighten(@accent, 5%);
     }
     .btn-primary:hover {
-      background-color:#1eb6ff;
-      border-color:#13b2ff
+      background-color:lighten(@accent, 5%);
+      border-color:lighten(@accent, 5%)
+    }
+    .btn-primary:hover:not(:disabled) {
+      background-color: lighten(@accent, 5%);
     }
     .btn-primary.disabled,
     .btn-primary:disabled {
-      background-color:#37beff;
-      border-color:#37beff
+      background-color:@accent;
+      border-color:@accent
     }
     .btn-primary:not(:disabled):not(.disabled).active,
     .btn-primary:not(:disabled):not(.disabled):active {
-      background-color:#04adff;
-      border-color:#00a8f9
+      background-color:lighten(@accent, 5%);
+      border-color:lighten(@accent, 5%)
     }
     .btn-danger {
-      color:#fff;
-      background-color:#ff5552;
-      border-color:#ff5552
+      color:@base;
+      background-color:@red;
+      border-color:@red
     }
     .btn-danger:focus {
-      background-color:#ff3c38;
-      border-color:#ff322e;
+      background-color:@maroon;
+      border-color:@maroon;
     }
     .btn-danger:hover {
-      background-color:#ff3c38;
-      border-color:#ff322e
+      background-color:@maroon !important;
+      border-color:@maroon
     }
     .btn-danger.disabled,
     .btn-danger:disabled {
-      background-color:#ff5552;
-      border-color:#ff5552
+      background-color:@red;
+      border-color:@red
     }
     .btn-danger:not(:disabled):not(.disabled).active,
     .btn-danger:not(:disabled):not(.disabled):active {
-      background-color:#ff231f;
-      border-color:#ff1915
+      background-color:@red;
+      border-color:@red
     }
     .ui-widget-overlay {
       background-color:rgba(44,54,58,.5);
@@ -248,47 +256,47 @@
       border-color:#d4dbde;
     }
     .ui-menu .ui-state-active {
-      background-color:#37beff!important
+      background-color:@blue!important
     }
     .ui-dialog .ui-dialog-titlebar {
       border-bottom-color:#ddd
     }
     .ui-dialog .ui-dialog-title {
-      color:#2c363a
+      color:@text
     }
     .ui-dialog .ui-dialog-titlebar-close {
-      color:#2c363a;
+      color:@text;
     }
     .ui-dialog .ui-dialog-buttonpane .ui-dialog-buttonset a.btn-link {
-      color:#2c363a
+      color:@text
     }
     .ui-dialog .ui-dialog-buttonpane .ui-dialog-buttonset a.btn-link:focus {
       background-color:rgba(55,190,255,.5)
     }
     @media screen and (max-width:480px) {
       .ui-dialog .ui-dialog-titlebar {
-        background-color:#f4f4f4
+        background-color:@base
       }
       .ui-dialog .ui-dialog-buttonpane {
         border-top-color:#ddd;
-        background-color:#f4f4f4
+        background-color:@base
       }
       .ui-dialog .ui-dialog-buttonpane .ui-dialog-buttonset button.btn-primary,
       .ui-dialog .ui-dialog-buttonpane .ui-dialog-buttonset button.btn-secondary {
-        color:#2c363a;
+        color:@text;
       }
       .ui-dialog .ui-dialog-buttonpane .ui-dialog-buttonset button.btn-danger {
-        color:#ff5552;
+        color:@red;
       }
       .ui-dialog .ui-dialog-buttonpane .ui-dialog-buttonset a.btn-link {
-        color:#2c363a;
+        color:@text;
       }
     }
     .ui-slider .ui-slider-range {
       background-color:#d0f0ff
     }
     .ui-slider .ui-slider-handle.ui-state-active {
-      background-color:#37beff;
+      background-color:@blue;
       border-color:#005984
     }
     .ui-datepicker .ui-datepicker-header {
@@ -296,28 +304,32 @@
     }
     .ui-datepicker .ui-datepicker-next,
     .ui-datepicker .ui-datepicker-prev {
-      color:#2c363a;
+      color:@text;
     }
     .ui-datepicker .ui-state-default,
     .ui-datepicker.ui-widget-content .ui-state-default {
-      color:#2c363a
+      color:@text
     }
     .ui-datepicker .ui-datepicker-days-cell-over a,
     .ui-datepicker .ui-datepicker-days-cell-over a.ui-state-default,
     .ui-datepicker .ui-state-highlight,
     .ui-datepicker.ui-widget-content .ui-state-highlight {
       background-color:#d0f0ff;
-      color:#37beff
+      color:@blue
     }
     .ui-datepicker a.ui-state-active {
-      background-color:#37beff!important;
+      background-color:@blue!important;
       color:#fff!important;
+    }
+    .ui-widget-header, .ui-widget-content {
+      background-color: @base
     }
     .minicolors-panel {
       border-color:#d4dbde;
     }
     .popover {
       border-color:#d4dbde;
+      background-color: @crust
     }
     html.layout-phone .popover:not(.select-menu) .listing li:last-child,
     html.layout-small .popover:not(.select-menu) .listing li:last-child {
@@ -345,7 +357,7 @@
       background-color:#ececec
     }
     .menu.toolbar a {
-      color:#2c363a;
+      color:@text;
     }
     .menu.toolbar a.selected {
       color:#41b849
@@ -357,10 +369,10 @@
       background-color:#e0e0e0
     }
     .menu.pagenav a {
-      color:#2c363a
+      color:@text
     }
     .menu.pagenav .pagenav-text {
-      color:#737677;
+      color:@subtext0;
     }
     .menu.pagenav.pagenav-list {
       background-color:#fbfbfb;
@@ -373,7 +385,7 @@
       border-bottom-color:#d4dbde
     }
     .menu .buttons button {
-      color:#2c363a;
+      color:@text;
     }
     .popover .menu li.separator {
       color:#737677;
@@ -381,13 +393,13 @@
     }
     .popover .menu li a:not(.disabled):hover {
       color:#fff;
-      background-color:#37beff
+      background-color:@blue
     }
     .popover .menu li a[aria-haspopup]::after {
       color:#737677;
     }
     .popover .menu li a[aria-haspopup].dropdown::after {
-      color:#2c363a;
+      color:@text;
     }
     .popover .menu li a[aria-haspopup]:hover::after {
       color:#fff
@@ -399,7 +411,7 @@
       background-color:#f6f6f6
     }
     .popover .menu .dropbutton a.dropdown:hover {
-      background-color:#37beff
+      background-color:@blue
     }
     @media screen and (min-width:769px) {
       .header a.button.icon:not(.disabled):focus,
@@ -409,68 +421,68 @@
     }
     @media screen and (max-width:768px) {
       .menu.listing a {
-        color:#2c363a
+        color:@text
       }
     }
     .searchbar {
-      background-color:#fbfbfb;
+      background-color:@mantle;
       border-bottom-color:#f1f3f4;
     }
     .searchbar form::before {
-      color:#737677;
+      color:@subtext0;
     }
     .searchbar a {
-      color:#2c363a
+      color:@text
     }
     .searchbar a.selected {
-      color:#41b849
+      color:@green
     }
     @media screen and (max-width:480px) {
       #taskmenu a {
         border-bottom-color:#f1f3f4!important;
-        color:#2c363a;
+        color:@text;
       }
     }
     @media screen and (min-width:481px) {
       #taskmenu a {
-        color:#fff;
+        color:@text;
       }
       #taskmenu a.selected {
-        color:#fff;
-        background-color:#45555c
+        color:@text;
+        background-color:@mantle
       }
       #taskmenu a.selected:hover {
-        color:#fff;
-        background-color:#45555c
+        color:@text;
+        background-color:@mantle
       }
       #taskmenu a:hover {
-        color:#fff;
-        background-color:#45555c
+        color:@text;
+        background-color:@mantle
       }
       #taskmenu .special-buttons {
-        background-color:#2f3a3f
+        background-color:@crust
       }
       #taskmenu .action-buttons a {
-        color:#37beff;
+        color:@accent;
       }
       #taskmenu .action-buttons a:hover {
-        color:#37beff;
-        background-color:#45555c
+        color:@accent;
+        background-color:@mantle
       }
       #taskmenu a.logout {
-        color:#ff5552!important
+        color:@red!important
       }
       #taskmenu a.logout:hover {
-        color:#ff5552!important
+        color:@red!important
       }
     }
     @media screen and (min-width:1025px) {
       #taskmenu a:focus {
-        background-color:#45555c
+        background-color:@mantle
       }
     }
     .ui.alert {
-      color:#2c363a;
+      color:@text;
       background-color:rgba(55,190,255,.05);
     }
     .ui.alert>i.icon {
@@ -489,7 +501,7 @@
       color:#ff5552
     }
     .ui.alert a:not(.btn) {
-      color:#37beff;
+      color:@blue;
     }
     .ui.alert.boxerror {
       background-color:rgba(255,85,82,.2)
@@ -504,7 +516,7 @@
       background-color:rgba(255,212,82,.2)
     }
     #messagestack div {
-      background-color:#2c363a;
+      background-color:@text;
       color:#fff
     }
     #messagestack div>i.icon::before {
@@ -514,17 +526,17 @@
       background-color:#6b7275
     }
     #messagestack .alert-info.information {
-      background-color:#37beff
+      background-color:@blue
     }
     #messagestack .alert-success {
       background-color:#41b849
     }
     #messagestack .alert-warning {
       background-color:#ffd452;
-      color:#2c363a
+      color:@text
     }
     #messagestack .alert-warning>i.icon::before {
-      color:#2c363a
+      color:@text
     }
     #messagestack .alert-danger {
       background-color:#ff5552
@@ -535,15 +547,15 @@
     }
     .listing li a,
     .listing tbody td {
-      color:#2c363a
+      color:@text
     }
     .listing tbody td a {
-      color:#2c363a
+      color:@text
     }
     .listing li.selected,
     .listing tr.selected td {
-      color:#2c363a;
-      background-color:#ebf9ff
+      color:@text;
+      background-color:@surface0
     }
     .listing li.droptarget>a,
     .listing tr.droptarget>td {
@@ -569,31 +581,31 @@
     }
     @media screen and (max-width:1200px) {
       .listing.selection-large-only li.selected {
-        color:#2c363a;
+        color:@text;
       }
     }
     .popupmenu .listing li>a:not(.disabled):hover {
       color:#fff;
-      background-color:#37beff
+      background-color:@blue
     }
     .popupmenu .listing li.selected {
       color:#fff;
-      background-color:#37beff
+      background-color:@blue
     }
     ul.treelist li.selected>a,
     ul.treelist li.selected>div>a {
-      color:#2c363a;
-      background-color:#ebf9ff
+      color:@text;
+      background-color:@mantle
     }
     .folderlist li.mailbox .unreadcount {
-      background-color:#37beff;
+      background-color:@blue;
       color:#fff;
     }
     .folderlist li.mailbox.recent>a {
       color:#008cd0
     }
     .folderlist li.mailbox.recent>a>.unreadcount {
-      background-color:#37beff;
+      background-color:@blue;
       color:#fff
     }
     .messagelist td.subject span.date,
@@ -632,7 +644,7 @@
       border-color:#f4f4f4
     }
     .attachmentslist li .attachment-name {
-      color:#2c363a
+      color:@text
     }
     .attachmentslist li .attachment-size {
       color:#737677;
@@ -645,10 +657,10 @@
     }
     .formcontent.raweditor .CodeMirror {
       border-color:#ced4da;
-      color:#2c363a
+      color:@text
     }
     .formcontent.raweditor .CodeMirror-focused {
-      border-color:#37beff;
+      border-color:@blue;
     }
     .formcontent.raweditor .CodeMirror-linebackground.line-error {
       background-color:#ff5552;
@@ -657,13 +669,13 @@
       background-color:rgba(55,190,255,.25);
     }
     .proplist li.with-sublist>a.dropdown {
-      color:#2c363a
+      color:@text
     }
     .multi-input>.content {
       border-color:#ced4da
     }
     .multi-input>.content.focused {
-      border-color:#37beff;
+      border-color:@blue;
     }
     .multi-input .input-group-text,
     .multi-input input,
@@ -683,7 +695,7 @@
       border-color:#d4dbde
     }
     .file-upload .hint {
-      color:#737677;
+      color:@subtext0;
     }
     .file-upload.droptarget.active {
       border-color:#b9b9b9
@@ -693,7 +705,7 @@
       background-color:#ececec
     }
     .recipient-input.focus {
-      border-color:#37beff;
+      border-color:@blue;
     }
     .recipient-input li.recipient,
     body>li.recipient.ui-sortable-helper {
@@ -702,10 +714,10 @@
     }
     .recipient-input li.recipient a.button.icon,
     body>li.recipient.ui-sortable-helper a.button.icon {
-      color:#2c363a
+      color:@text
     }
     .tagedit-list[tabindex="-1"] {
-      border-color:#37beff;
+      border-color:@blue;
     }
     .tagedit-list li.tagedit-listelement-old {
       border-color:#ced4da;
@@ -713,20 +725,21 @@
     }
     .skinselection .skinthumbnail {
       border-color:#ced4da;
-      background-color:#fff;
+      background-color:@base;
     }
     .image-upload {
-      background-color:#f4f4f4
+      background-color:@base
     }
     .image-upload a.button {
       background-color:rgba(255,255,255,.85);
     }
     .form-control {
-      color:#2c363a
+      color:@text;
+      background-color: @mantle
     }
     .form-control:focus {
-      color:#2c363a;
-      border-color:#37beff;
+      color:@text;
+      border-color:@blue;
     }
     .form-control.is-invalid {
       border-color:#ff5552;
@@ -735,53 +748,55 @@
       border-color:#ff5552;
     }
     .form-control::placeholder {
-      color:#bbb
+      color:@subtext0
     }
     .invalid-feedback {
       color:#ff5552;
     }
     .input-group-text {
-      color:#2c363a;
-      background-color:#f1f3f4
+      color:@text;
+      background-color:@mantle
     }
     .input-group-text input:focus {
-      border-color:#37beff!important
+      border-color:@blue!important
     }
     .custom-switch .custom-control-input:focus:not(:checked)~.custom-control-label::before {
-      border-color:#37beff
+      border-color:@blue
     }
     .custom-switch .custom-control-input:checked~.custom-control-label::before {
-      border-color:#37beff;
-      background-color:#37beff
+      color: @base;
+      border-color:@blue;
+      background-color:@blue
     }
     .custom-switch .custom-control-input:checked:disabled~.custom-control-label::before {
       border-color:#84d7ff;
       background-color:#84d7ff
     }
     .custom-file-input:focus~.custom-file-label {
-      border-color:#37beff;
+      border-color:@blue;
     }
     div.tox.tox-tinymce {
       border-radius:.25rem;
       border-color:#ced4da
     }
     div.tox.focused {
-      border-color:#37beff!important;
+      border-color:@accent!important;
+      box-shadow: 0 0 0 .2rem fade(@accent, 25%) !important;
     }
     div.tox .tox-toolbar-overlord>div {
-      background-color:#f1f3f4
+      background-color:@mantle
     }
     div.tox .tox-toolbar {
-      background-color:#f1f3f4
+      background-color:@mantle
     }
     div.tox .tox-dialog {
       border-color:#d4dbde;
     }
     div.tox .tox-dialog .tox-dialog__body-nav-item--active {
-      color:#00acff;
+      color:lighten(@accent, 5%);
     }
     div.tox .tox-dialog .tox-dialog__body-nav-item--active:hover {
-      color:#008acc
+      color:@accent
     }
     div.tox .tox-dialog-wrap__backdrop {
       background-color:rgba(44,54,58,.5)
@@ -790,7 +805,7 @@
       border-bottom-color:#ddd;
     }
     div.tox .tox-dialog__header .tox-button {
-      color:#2c363a;
+      color:@text;
     }
     @media screen and (max-width:480px) {
       div.tox .tox-dialog__footer {
@@ -799,21 +814,21 @@
     }
     div.tox .tox-dialog__footer .tox-button {
       color:#fff;
-      background-color:#37beff;
-      border-color:#37beff;
+      background-color:@blue;
+      border-color:@blue;
     }
     div.tox .tox-dialog__footer .tox-button:focus {
       background-color:#1eb6ff;
-      border-color:#13b2ff;
+      border-color:@sky;
     }
     div.tox .tox-dialog__footer .tox-button:hover {
       background-color:#1eb6ff;
-      border-color:#13b2ff
+      border-color:@sky
     }
     div.tox .tox-dialog__footer .tox-button.disabled,
     div.tox .tox-dialog__footer .tox-button:disabled {
-      background-color:#37beff;
-      border-color:#37beff
+      background-color:@blue;
+      border-color:@blue
     }
     div.tox .tox-dialog__footer .tox-button:not(:disabled):not(.disabled).active,
     div.tox .tox-dialog__footer .tox-button:not(:disabled):not(.disabled):active {
@@ -821,8 +836,8 @@
       border-color:#00a8f9
     }
     div.tox .tox-dialog__footer .tox-button:focus:not(:disabled) {
-      background-color:#37beff;
-      border-color:#37beff
+      background-color:@blue;
+      border-color:@blue
     }
     div.tox .tox-dialog__footer .tox-button.tox-button--secondary {
       background-color:#8b9fa7;
@@ -852,22 +867,22 @@
       border-color:#8b9fa7
     }
     div.tox .tox-dialog__title {
-      color:#2c363a
+      color:@text
     }
     div.tox .tox-label {
-      color:#2c363a;
+      color:@text;
     }
     div.tox .tox-color-input>input,
     div.tox .tox-listboxfield .tox-listbox--select,
     div.tox .tox-textarea,
     div.tox .tox-textfield {
-      color:#2c363a;
+      color:@text;
     }
     div.tox .tox-color-input>input:focus,
     div.tox .tox-listboxfield .tox-listbox--select:focus,
     div.tox .tox-textarea:focus,
     div.tox .tox-textfield:focus {
-      border-color:#37beff;
+      border-color:@blue;
     }
     div.tox .image-selector button {
       color:#fff;
@@ -894,18 +909,18 @@
     }
     @media screen and (max-width:480px) {
       div.tox .tox-dialog__header {
-        background-color:#f4f4f4
+        background-color:@base
       }
       div.tox .tox-dialog__footer {
-        background-color:#f4f4f4
+        background-color:@base
       }
       div.tox .tox-dialog__footer .tox-button {
-        color:#2c363a!important;
+        color:@text!important;
       }
       div.tox .tox-dialog__footer .tox-button:active,
       div.tox .tox-dialog__footer .tox-button:focus,
       div.tox .tox-dialog__footer .tox-button:hover {
-        color:#2c363a
+        color:@text
       }
     }
     .image-selector.droptarget {
@@ -913,15 +928,15 @@
     }
     .image-selector .attachmentslist li:focus,
     .image-selector .attachmentslist li:hover {
-      background-color:#ebf9ff
+      background-color:@surface0
     }
     .image-selector .attachmentslist li span.img {
-      border-color:#f1f3f4;
-      background-color:#fff;
+      border-color:@base;
+      background-color:@base;
     }
     .html-editor .editor-toolbar {
       border-bottom-color:#ced4da;
-      background-color:#f1f3f4
+      background-color:@base
     }
     .html-editor .editor-toolbar .mce-i-html {
       color:#222f3e
@@ -942,7 +957,7 @@
     }
     .googie_list li.googie_list_onhover {
       color:#fff;
-      background-color:#37beff
+      background-color:@blue
     }
     #login-form .formbuttons+.oauthlogin {
       border-top-color:#ccc
@@ -957,7 +972,7 @@
       background-color:#f1f3f4;
     }
     #contactpic {
-      background-color:#f4f4f4
+      background-color:@base
     }
     #contacthead.readonly .source.row {
       color:#737677;
@@ -966,7 +981,7 @@
       color:#ff5552
     }
     #message-header>.header img.contactphoto {
-      background-color:#f4f4f4
+      background-color:@base
     }
     #message-header .header-headers .header-title {
       color:#737677;
