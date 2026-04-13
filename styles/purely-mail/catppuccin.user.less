@@ -129,7 +129,7 @@
     }
     .quota-widget .bar {
       background-color:@base;
-      border-color:#d4dbde;
+      border-color:@surface0;
     }
     .quota-widget .value {
       background-color:@blue;
@@ -152,7 +152,7 @@
       background-color:#f1f3f4
     }
     .table-widget {
-      border-color:#d4dbde
+      border-color:@surface0
     }
     .table-widget>.footer {
       border-top-color:#d4dbde;
@@ -253,7 +253,7 @@
       background-color:rgba(44,54,58,.5);
     }
     .ui-widget {
-      border-color:#d4dbde;
+      border-color:@surface0;
     }
     .ui-menu .ui-state-active {
       background-color:@blue!important
@@ -325,10 +325,10 @@
       background-color: @base
     }
     .minicolors-panel {
-      border-color:#d4dbde;
+      border-color:@surface0;
     }
     .popover {
-      border-color:#d4dbde;
+      border-color:@surface0;
       background-color: @crust
     }
     html.layout-phone .popover:not(.select-menu) .listing li:last-child,
@@ -584,12 +584,16 @@
         color:@text;
       }
     }
+    .listing li.selected > a {
+      color: @accent;
+      background-color: @mantle;
+    }
     .popupmenu .listing li>a:not(.disabled):hover {
       color:#fff;
       background-color:@blue
     }
     .popupmenu .listing li.selected {
-      color:#fff;
+      color:@base;
       background-color:@blue
     }
     ul.treelist li.selected>a,
@@ -692,7 +696,7 @@
       border-color:#ff5552;
     }
     .file-upload {
-      border-color:#d4dbde
+      border-color:@surface0
     }
     .file-upload .hint {
       color:@subtext0;
@@ -790,7 +794,7 @@
       background-color:@mantle
     }
     div.tox .tox-dialog {
-      border-color:#d4dbde;
+      border-color:@surface0;
     }
     div.tox .tox-dialog .tox-dialog__body-nav-item--active {
       color:lighten(@accent, 5%);
@@ -924,7 +928,7 @@
       }
     }
     .image-selector.droptarget {
-      border-color:#d4dbde
+      border-color:@surface0
     }
     .image-selector .attachmentslist li:focus,
     .image-selector .attachmentslist li:hover {
@@ -1020,7 +1024,7 @@
     .message-part blockquote span.blockquote-link {
       color:#737677;
       background-color:#f1f3f4;
-      border-color:#d4dbde;
+      border-color:@surface0;
     }
     .message-part span.sig {
       color:#737677
