@@ -1,0 +1,85 @@
+/* ==UserStyle==
+@name Fabric Docs Catppuccin
+@namespace github.com/catppuccin/userstyles/styles/fabric-docs
+@homepageURL https://github.com/catppuccin/userstyles/tree/main/styles/fabric-docs
+@version 2000.01.01
+@updateURL https://github.com/catppuccin/userstyles/raw/main/styles/fabric-docs/catppuccin.user.less
+@supportURL https://github.com/catppuccin/userstyles/issues?q=is%3Aopen+is%3Aissue+label%3Afabric-docs
+@description Soothing pastel theme for Fabric Docs
+@author Catppuccin
+@license MIT
+
+@preprocessor less
+@var select lightFlavor "Light Flavor" ["latte:Latte*", "frappe:Frappé", "macchiato:Macchiato", "mocha:Mocha"]
+@var select darkFlavor "Dark Flavor" ["latte:Latte", "frappe:Frappé", "macchiato:Macchiato", "mocha:Mocha*"]
+@var select accentColor "Accent" ["rosewater:Rosewater", "flamingo:Flamingo", "pink:Pink", "mauve:Mauve*", "red:Red", "maroon:Maroon", "peach:Peach", "yellow:Yellow", "green:Green", "teal:Teal", "blue:Blue", "sapphire:Sapphire", "sky:Sky", "lavender:Lavender", "subtext0:Gray"]
+==/UserStyle== */
+
+@import "https://userstyles.catppuccin.com/lib/lib.less";
+
+@-moz-document domain("docs.fabricmc.net") {
+  :root.dark {
+    #catppuccin(@darkFlavor);
+  }
+  :root:not(.dark) {
+    #catppuccin(@lightFlavor);
+  }
+
+  #catppuccin(@flavor) {
+    #lib.palette();
+    #lib.defaults();
+
+    --vp-c-white:@crust;
+    --vp-c-black:@crust;
+
+    --vp-c-gray-1:@surface0;
+    --vp-c-gray-2:@surface1;
+    --vp-c-gray-3:@surface2;
+    --vp-c-gray-soft:fade(@surface2, 14%);
+
+    --vp-c-blue-1: @accent;
+    --vp-c-blue-2: @accent;
+    --vp-c-blue-3: @accent;
+    --vp-c-blue-soft: fade(@accent, 14%);
+
+    --vp-c-indigo-1:@lavender;
+    --vp-c-indigo-2:@lavender;
+    --vp-c-indigo-3:@lavender;
+    --vp-c-indigo-soft:fade(@lavender, 14%);
+
+    --vp-c-purple-1:@mauve;
+    --vp-c-purple-2:@mauve;
+    --vp-c-purple-3:@mauve;
+    --vp-c-purple-soft:fade(@mauve, 14%);
+
+    --vp-c-green-1:@green;
+    --vp-c-green-2:@green;
+    --vp-c-green-3:@green;
+    --vp-c-green-soft:fade(@green, 14%);
+
+    --vp-c-yellow-1:@yellow;
+    --vp-c-yellow-2:@yellow;
+    --vp-c-yellow-3:@yellow;
+    --vp-c-yellow-soft:fade(@yellow, 14%);
+
+    --vp-c-red-1:@red;
+    --vp-c-red-2:@red;
+    --vp-c-red-3:@red;
+    --vp-c-red-soft:fade(@red, 14%);
+
+    --vp-c-sponsor:@pink;
+
+    --vp-c-bg:@base;
+    --vp-c-bg-alt:@mantle;
+    --vp-c-bg-elv:@base;
+    --vp-c-bg-soft:@mantle;
+
+    --vp-c-border:@surface1;
+    --vp-c-divider:@surface0;
+    --vp-c-gutter:@surface0;
+
+    --vp-c-text-1:@text;
+    --vp-c-text-2:@subtext1;
+    --vp-c-text-3:@subtext0;
+  }
+}
