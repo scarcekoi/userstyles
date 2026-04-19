@@ -1182,15 +1182,35 @@
       }
     }
 
-    /* Modal (Log in/sign up, etc.) */
-    .dcg-shared-modal {
-      --dcg-modal-background-color: @base;
-    }
+    /* Login/sign up modal */
     .dcg-shared-modal-dialog {
       color: @text;
+      --dcg-modal-background-color: @base;
+      
+      /* Account signup welcome */
+      .dcg-authentication-modal__sublabel {
+        color: @subtext0;
+      }
+      .dcg-authentication-modal__tag {
+        background-color: fade(@accent, 20%);
+        
+        &:hover {
+          background-color: fade(@accent, 30%);
+        }
+        
+        &.dcg-authentication-modal__tag--selected {
+          border-color: @accent;
+        }
+      }
     }
 
-    /* Logged in account text (name and email) */
+    /* Account button/dropdown (displays username) */
+		.dcg-header-bar__account-menu {
+      &.dcg-hovered, &[aria-expanded="true"] {
+		    background-color: @surface0;
+      }
+		}
+    /* Account settings modal */
     .dcg-shared-account-dialog {
       color: @text;
     }
@@ -1200,7 +1220,6 @@
       background-color:@crust;
       color: @text;
     }
-
     .dcg-section__beta-button {
       color: @base;
       background-color: @text;
@@ -1214,12 +1233,8 @@
 	    }
 	  }
 
-		/* Account button (when hovered and focused) */
-		.dcg-header-bar__account-menu.dcg-hovered, .dcg-header-bar__account-menu[aria-expanded="true"] {
-		  background-color: @surface0;
-		}
-
-		.dcg-powered-by {
+    /* "powered by" text above logo */
+    .dcg-powered-by {
 		  color: @text !important;
 		}
   }
