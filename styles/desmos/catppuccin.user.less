@@ -214,7 +214,10 @@
       border-radius: 5px;
     }
 
-    .dcg-header, .dcg-main-header-container, .navbar-inner, .dcg-practice-header-view {
+    .dcg-header,
+    .dcg-main-header-container,
+    .navbar-inner,
+    .dcg-practice-header-view {
       background: @crust !important;
       border-bottom-color: @surface0 !important;
       *:not(
@@ -1163,7 +1166,7 @@
     }
 
     .dcg-frontpage-landing__announcement-interior {
-      background-color: fade(@crust,  50%);
+      background-color: fade(@crust, 50%);
     }
 
     /* Exams & Testing Pages (desmos.com/testing/default/{fourfunction,graphing,scientific}) */
@@ -1177,7 +1180,8 @@
         color: @base !important;
       }
 
-      .dcg-sample-calculator__calculator-name, .dcg-sample-calculator__state-name {
+      .dcg-sample-calculator__calculator-name,
+      .dcg-sample-calculator__state-name {
         border-color: @base;
       }
     }
@@ -1186,18 +1190,18 @@
     .dcg-shared-modal-dialog {
       color: @text;
       --dcg-modal-background-color: @base;
-      
+
       /* Account signup welcome */
       .dcg-authentication-modal__sublabel {
         color: @subtext0;
       }
       .dcg-authentication-modal__tag {
         background-color: fade(@accent, 20%);
-        
+
         &:hover {
           background-color: fade(@accent, 30%);
         }
-        
+
         &.dcg-authentication-modal__tag--selected {
           border-color: @accent;
         }
@@ -1205,11 +1209,11 @@
     }
 
     /* Account button/dropdown (displays username) */
-		.dcg-header-bar__account-menu {
+    .dcg-header-bar__account-menu {
       &.dcg-hovered, &[aria-expanded="true"] {
-		    background-color: @surface0;
+        background-color: @surface0;
       }
-		}
+    }
     /* Account settings modal */
     .dcg-shared-account-dialog {
       color: @text;
@@ -1217,7 +1221,7 @@
 
     /* Desmos Professional (desmos.com/professional) */
     .dcg-professional-hero {
-      background-color:@crust;
+      background-color: @crust;
       color: @text;
     }
     .dcg-section__beta-button {
@@ -1225,17 +1229,17 @@
       background-color: @text;
 
       &.dcg-hovered {
-	      background-color: @subtext1;
-	    }
+        background-color: @subtext1;
+      }
 
       &.dcg-depressed {
-	      background-color: @subtext0
-	    }
-	  }
+        background-color: @subtext0;
+      }
+    }
 
     /* "powered by" text above logo */
     .dcg-powered-by {
-		  color: @text !important;
-		}
+      color: @text !important;
+    }
   }
 }
