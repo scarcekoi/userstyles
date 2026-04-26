@@ -75,6 +75,7 @@ collaborators:
   - &koibtw koibtw
   - &TheAnonymousCrusher TheAnonymousCrusher
   - &42willow 42willow
+  - &scarcekoi scarcekoi
 
 userstyles:
   advent-of-code:
@@ -157,6 +158,12 @@ userstyles:
     color: green
     note: "Make sure to use the default **Teal** theme from the built-in color picker (located at the bottom of the page) for the best experience!"
     current-maintainers: [*rockquiet]
+  cachyos-wiki:
+    name: CachyOS Wiki
+    link: https://wiki.cachyos.org
+    categories: [wiki]
+    color: green
+    current-maintainers: [*scarcekoi]
   canvas-lms:
     name: Canvas LMS
     link: https://www.instructure.com/canvas
