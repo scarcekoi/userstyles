@@ -39,6 +39,6 @@ export async function runStylelint(
 
     if (result.warnings.length > 0) throw new Error("stylelint error");
   }
-  
+
   return code;
 }

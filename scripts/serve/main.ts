@@ -72,7 +72,7 @@ let lastLibChecksum = await calculateLibChecksum();
 
 async function updateTempUserstyle() {
   let contents = await Deno.readTextFile(userstylePath);
-/* Appends a query parameter suffix to import URLs from userstyles.catppuccin.com, containing the library modules content checksum.  */
+  /* Appends a query parameter suffix to import URLs from userstyles.catppuccin.com, containing the library modules content checksum.  */
   const importRegex =
     /(@import\s+"https:\/\/userstyles\.catppuccin\.com\/lib\/[^\s]+\.less")/g;
   contents = contents.replace(importRegex, (match) => {
