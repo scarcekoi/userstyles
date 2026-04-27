@@ -1,0 +1,32 @@
+/* ==UserStyle==
+@name Coddy Catppuccin
+@namespace github.com/catppuccin/userstyles/styles/coddy
+@homepageURL https://github.com/catppuccin/userstyles/tree/main/styles/coddy
+@version 2000.01.01
+@updateURL https://github.com/catppuccin/userstyles/raw/main/styles/coddy/catppuccin.user.less
+@supportURL https://github.com/catppuccin/userstyles/issues?q=is%3Aopen+is%3Aissue+label%3Acoddy
+@description Soothing pastel theme for Coddy
+@author Catppuccin
+@license MIT
+
+@preprocessor less
+@var select lightFlavor "Light Flavor" ["latte:Latte*", "frappe:Frappé", "macchiato:Macchiato", "mocha:Mocha"]
+@var select darkFlavor "Dark Flavor" ["latte:Latte", "frappe:Frappé", "macchiato:Macchiato", "mocha:Mocha*"]
+@var select accentColor "Accent" ["rosewater:Rosewater", "flamingo:Flamingo", "pink:Pink", "mauve:Mauve*", "red:Red", "maroon:Maroon", "peach:Peach", "yellow:Yellow", "green:Green", "teal:Teal", "blue:Blue", "sapphire:Sapphire", "sky:Sky", "lavender:Lavender", "subtext0:Gray"]
+==/UserStyle== */
+
+@import "https://userstyles.catppuccin.com/lib/lib.less";
+
+@-moz-document domain("coddy.tech") {
+  :where(html[data-theme-group="dark"]) {
+    #catppuccin(@darkFlavor);
+  }
+  :where(html[data-theme-group="light"]) {
+    #catppuccin(@lightFlavor);
+  }
+
+  #catppuccin(@flavor) {
+    #lib.palette();
+    #lib.defaults();
+  }
+}
