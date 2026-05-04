@@ -75,6 +75,7 @@ collaborators:
   - &koibtw koibtw
   - &TheAnonymousCrusher TheAnonymousCrusher
   - &42willow 42willow
+  - &scarcekoi scarcekoi
 
 userstyles:
   advent-of-code:
@@ -483,6 +484,13 @@ userstyles:
     color: pink
     current-maintainers: [*GenShibe]
     past-maintainers: [*isabelroses]
+  internet-archive:
+    name: Internet Archive
+    link: https://archive.org
+    categories: [wiki]
+    icon: internetarchive
+    color: text
+    current-maintainers: [*scarcekoi]
   invidious:
     name: Invidious
     link: https://invidious.io
