@@ -75,6 +75,7 @@ collaborators:
   - &koibtw koibtw
   - &TheAnonymousCrusher TheAnonymousCrusher
   - &42willow 42willow
+  - &scarcekoi scarcekoi
 
 userstyles:
   advent-of-code:
@@ -1019,6 +1020,12 @@ userstyles:
     color: red
     current-maintainers: [*isabelroses, *uncenter]
     past-maintainers: [*elkrien]
+  zed-docs:
+    name: Zed Docs
+    link: https://zed.dev/docs
+    categories: [wiki]
+    color: blue
+    current-maintainers: [*scarcekoi]
   zen-browser-docs:
     name: Zen Browser Docs
     link: https://zen-browser.app
