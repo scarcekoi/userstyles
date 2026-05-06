@@ -75,6 +75,7 @@ collaborators:
   - &koibtw koibtw
   - &TheAnonymousCrusher TheAnonymousCrusher
   - &42willow 42willow
+  - &scarcekoi scarcekoi
 
 userstyles:
   advent-of-code:
@@ -530,6 +531,13 @@ userstyles:
     icon: lemmy
     color: green
     current-maintainers: [*Gandalf-the-Blue]
+  letterboxd:
+    name: Letterboxd
+    link: https://letterboxd.com
+    categories: [entertainment, social_networking]
+    icon: letterboxd
+    color: green
+    current-maintainers: [*scarcekoi]
   libreddit:
     name: Libreddit
     link: https://github.com/libreddit/libreddit
