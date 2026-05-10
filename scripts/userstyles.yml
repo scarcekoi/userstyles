@@ -74,6 +74,7 @@ collaborators:
   - &ImenaOphelia ImenaOphelia
   - &koibtw koibtw
   - &TheAnonymousCrusher TheAnonymousCrusher
+  - &scarcekoi scarcekoi
 
 userstyles:
   advent-of-code:
@@ -528,6 +529,12 @@ userstyles:
     icon: lemmy
     color: green
     current-maintainers: [*Gandalf-the-Blue]
+  libby:
+    name: Libby
+    link: https://libbyapp.com
+    categories: [productivity]
+    color: green
+    current-maintainers: [*scarcekoi]
   libreddit:
     name: Libreddit
     link: https://github.com/libreddit/libreddit
