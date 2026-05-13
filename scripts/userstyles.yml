@@ -75,6 +75,7 @@ collaborators:
   - &koibtw koibtw
   - &TheAnonymousCrusher TheAnonymousCrusher
   - &42willow 42willow
+  - &scarcekoi scarcekoi
 
 userstyles:
   advent-of-code:
@@ -928,6 +929,13 @@ userstyles:
     categories: [discussion_forum, social_networking]
     color: text
     current-maintainers: [*Guaxinim5573]
+  tails:
+    name: Tails
+    link: https://tails.net
+    categories: [system]
+    color: mauve
+    icon: tails
+    current-maintainers: [*scarcekoi]
   tldraw:
     name: tldraw
     link: https://www.tldraw.com
