@@ -75,6 +75,7 @@ collaborators:
   - &koibtw koibtw
   - &TheAnonymousCrusher TheAnonymousCrusher
   - &42willow 42willow
+  - &scarcekoi scarcekoi
 
 userstyles:
   advent-of-code:
@@ -586,6 +587,12 @@ userstyles:
     color: lavender
     current-maintainers: [*comfysage]
     past-maintainers: [*unseen-ninja, *isabelroses]
+  mctiers:
+    name: MCTIERS
+    link: https://mctiers.com
+    categories: [entertainment]
+    color: yellow
+    current-maintainers: [*scarcekoi]
   mdbook:
     name: mdBook
     link: https://rust-lang.github.io/mdBook/
