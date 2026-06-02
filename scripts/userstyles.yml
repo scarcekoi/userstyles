@@ -75,8 +75,15 @@ collaborators:
   - &koibtw koibtw
   - &TheAnonymousCrusher TheAnonymousCrusher
   - &42willow 42willow
+  - &scarcekoi scarcekoi
 
 userstyles:
+  adrinth:
+    name: Adrinth
+    link: https://adrinth.com
+    categories: [productivity]
+    color: green
+    current-maintainers: [*scarcekoi]
   advent-of-code:
     name: Advent Of Code
     link: https://adventofcode.com
