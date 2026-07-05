@@ -75,6 +75,7 @@ collaborators:
   - &koibtw koibtw
   - &TheAnonymousCrusher TheAnonymousCrusher
   - &42willow 42willow
+  - &scarcekoi scarcekoi
 
 userstyles:
   advent-of-code:
@@ -129,6 +130,13 @@ userstyles:
     note: "Make sure to use the default **Light** theme."
     current-maintainers: []
     past-maintainers: [*GenShibe]
+  bandcamp:
+    name: Bandcamp
+    link: https://bandcamp.com
+    categories: [music]
+    icon: bandcamp
+    color: blue
+    current-maintainers: [*scarcekoi]
   boringproxy:
     name: boringproxy
     link: https://boringproxy.io
