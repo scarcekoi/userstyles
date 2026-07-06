@@ -75,6 +75,7 @@ collaborators:
   - &koibtw koibtw
   - &TheAnonymousCrusher TheAnonymousCrusher
   - &42willow 42willow
+  - &scarcekoi scarcekoi
 
 userstyles:
   advent-of-code:
@@ -607,6 +608,13 @@ userstyles:
     icon: modrinth
     color: green
     current-maintainers: [*thismoon]
+  mullvad:
+    name: Mullvad
+    link: https://mullvad.net
+    categories: [productivity]
+    icon: mullvad
+    color: blue
+    current-maintainers: [*scarcekoi]
   microsoft-word:
     name: Microsoft Word
     link: https://office.com
