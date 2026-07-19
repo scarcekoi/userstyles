@@ -75,6 +75,7 @@ collaborators:
   - &koibtw koibtw
   - &TheAnonymousCrusher TheAnonymousCrusher
   - &42willow 42willow
+  - &scarcekoi scarcekoi
 
 userstyles:
   advent-of-code:
@@ -242,6 +243,12 @@ userstyles:
     icon: deepseek
     color: blue
     current-maintainers: [*WalkQuackBack]
+  deflock:
+    name: DeFlock
+    link: https://deflock.org
+    categories: [wiki]
+    color: blue
+    current-maintainers: [*scarcekoi]
   desmos:
     name: Desmos
     link: https://desmos.com
