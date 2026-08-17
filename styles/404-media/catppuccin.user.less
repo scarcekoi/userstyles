@@ -1,0 +1,32 @@
+/* ==UserStyle==
+@name 404 Media Catppuccin
+@namespace github.com/catppuccin/userstyles/styles/404-media
+@homepageURL https://github.com/catppuccin/userstyles/tree/main/styles/404-media
+@version 2000.01.01
+@updateURL https://github.com/catppuccin/userstyles/raw/main/styles/404-media/catppuccin.user.less
+@supportURL https://github.com/catppuccin/userstyles/issues?q=is%3Aopen+is%3Aissue+label%3A404-media
+@description Soothing pastel theme for 404 Media
+@author Catppuccin
+@license MIT
+
+@preprocessor less
+@var select lightFlavor "Light Flavor" ["latte:Latte*", "frappe:Frappé", "macchiato:Macchiato", "mocha:Mocha"]
+@var select darkFlavor "Dark Flavor" ["latte:Latte", "frappe:Frappé", "macchiato:Macchiato", "mocha:Mocha*"]
+@var select accentColor "Accent" ["rosewater:Rosewater", "flamingo:Flamingo", "pink:Pink", "mauve:Mauve*", "red:Red", "maroon:Maroon", "peach:Peach", "yellow:Yellow", "green:Green", "teal:Teal", "blue:Blue", "sapphire:Sapphire", "sky:Sky", "lavender:Lavender", "subtext0:Gray"]
+==/UserStyle== */
+
+@import "https://userstyles.catppuccin.com/lib/std/v1.less";
+
+@-moz-document domain("404media.co") {
+  :root[data-color-scheme="dark"] {
+    #catppuccin(@darkFlavor);
+  }
+  :root[data-color-scheme="light"] {
+    #catppuccin(@lightFlavor);
+  }
+
+  #catppuccin(@flavor) {
+    #lib.palette();
+    #lib.defaults();
+  }
+}

@@ -75,8 +75,15 @@ collaborators:
   - &koibtw koibtw
   - &TheAnonymousCrusher TheAnonymousCrusher
   - &42willow 42willow
+  - &scarcekoi scarcekoi
 
 userstyles:
+  404-media:
+    name: 404 Media
+    link: https://404media.co
+    categories: [news_and_journalism]
+    color: green
+    current-maintainers: [*scarcekoi]
   advent-of-code:
     name: Advent Of Code
     link: https://adventofcode.com
