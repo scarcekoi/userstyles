@@ -17,7 +17,7 @@
 
 @import "https://userstyles.catppuccin.com/lib/std/v1.less";
 
-@-moz-document domain("lemon-manuals.la") {
+@-moz-document domain("lemon-manuals.la"), domain("lemon-manuals.org.ua"), domain("lemon-manuals.gy") {
   :root {
     @media (prefers-color-scheme: light) {
       #catppuccin(@lightFlavor);
@@ -30,5 +30,69 @@
   #catppuccin(@flavor) {
     #lib.palette();
     #lib.defaults();
+
+    body {
+      background-color: @base;
+      color: @text;
+    }
+    a {
+      color: @blue;
+
+      &:hover {
+        color: @sky;
+      }
+
+      &:visited {
+        color: @lavender;
+      }
+    }
+    .theme-colors {
+      background-color: @mantle;
+      color: @text;
+    }
+    .theme-colors a {
+      color: @accent;
+    }
+
+    /** FOLDERS **/
+    .li-folder {
+      filter: @text-filter;
+    }
+    .li-folder.li-folder-open {
+      filter: @text-filter;
+    }
+    .selected {
+      background-color: rgba(255, 0, 0, 0.5);
+    }
+
+    /** HIGHLIGHTED REGIONS **/
+    .oxe-region {
+      background-color: rgba(25,122,250,.3);
+    }
+
+    /* TABLES */
+    td, th {
+      border-color: @text;
+    }
+
+    .other-variant {
+      background-color: lightblue;
+    }
+    .other-car {
+      background-color: orange;
+    }
+    .other-announcement {
+      background-color: @yellow;
+      color: @base;
+    }
+
+    /* ABOUT PAGE */
+    code {
+      background-color: darkred;
+    }
+
+    .folder-icon {
+      filter: @text-filter;
+    }
   }
 }
