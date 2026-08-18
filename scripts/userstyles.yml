@@ -75,6 +75,7 @@ collaborators:
   - &koibtw koibtw
   - &TheAnonymousCrusher TheAnonymousCrusher
   - &42willow 42willow
+  - &scarcekoi scarcekoi
 
 userstyles:
   advent-of-code:
@@ -530,6 +531,12 @@ userstyles:
     icon: lemmy
     color: green
     current-maintainers: [*Gandalf-the-Blue]
+  lemon-manuals:
+    name: Lemon Manuals
+    link: https://lemon-manuals.la
+    categories: [wiki]
+    color: yellow
+    current-maintainers: [*scarcekoi]
   libreddit:
     name: Libreddit
     link: https://github.com/libreddit/libreddit
