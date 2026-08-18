@@ -75,6 +75,7 @@ collaborators:
   - &koibtw koibtw
   - &TheAnonymousCrusher TheAnonymousCrusher
   - &42willow 42willow
+  - &scarcekoi scarcekoi
 
 userstyles:
   advent-of-code:
@@ -578,6 +579,12 @@ userstyles:
     icon: lobsters
     color: red
     current-maintainers: [*steinuil]
+  manim-community-docs:
+    name: Manim Community Docs
+    link: https://docs.manim.community
+    categories: [wiki]
+    color: blue
+    current-maintainers: [*scarcekoi]
   mastodon:
     name: Mastodon
     link: https://github.com/mastodon/mastodon
