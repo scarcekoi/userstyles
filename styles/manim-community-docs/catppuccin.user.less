@@ -28,5 +28,64 @@
   #catppuccin(@flavor) {
     #lib.palette();
     #lib.defaults();
+
+    --color-problematic: #b30000;
+
+    // Base Colors
+    --color-foreground-primary: black; // for main text and headings
+    --color-foreground-secondary: #5a5c63; // for secondary text
+    --color-foreground-muted: #6b6f76; // for muted text
+    --color-foreground-border: #878787; // for content borders
+
+    --color-background-primary: white; // for content
+    --color-background-secondary: #f8f9fb; // for navigation + ToC
+    --color-background-hover: #efeff4ff; // for navigation-item hover
+    --color-background-hover--transparent: #efeff400;
+    --color-background-border: #eeebee; // for UI borders
+    --color-background-item: #ccc; // for "background" items (eg: copybutton)
+
+    // Announcements
+    --color-announcement-background: #000000dd;
+    --color-announcement-text: #eeebee;
+
+    // Brand colors
+    --color-brand-primary: #0a4bff;
+    --color-brand-content: #2757dd;
+    --color-brand-visited: #872ee0;
+
+    // API documentation
+    --color-api-background: var(--color-background-hover--transparent);
+    --color-api-background-hover: var(--color-background-hover);
+    --color-api-overall: var(--color-foreground-secondary);
+    --color-api-name: var(--color-problematic);
+    --color-api-pre-name: var(--color-problematic);
+    --color-api-paren: var(--color-foreground-secondary);
+    --color-api-keyword: var(--color-foreground-primary);
+
+    --color-api-added: #21632c;
+    --color-api-added-border: #38a84d;
+    --color-api-changed: #046172;
+    --color-api-changed-border: #06a1bc;
+    --color-api-deprecated: #605706;
+    --color-api-deprecated-border: #f0d90f;
+    --color-api-removed: #b30000;
+    --color-api-removed-border: #ff5c5c;
+
+    --color-highlight-on-target: #ffffcc;
+
+    // Inline code background
+    --color-inline-code-background: var(--color-background-secondary);
+
+    // Highlighted text (search)
+    --color-highlighted-background: #ddeeff;
+    --color-highlighted-text: var(--color-foreground-primary);
+
+    // GUI Labels
+    --color-guilabel-background: #ddeeff80;
+    --color-guilabel-border: #bedaf580;
+    --color-guilabel-text: var(--color-foreground-primary);
+
+    // Admonitions!
+    --color-admonition-background: transparent;
   }
 }
