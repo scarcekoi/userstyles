@@ -75,6 +75,7 @@ collaborators:
   - &koibtw koibtw
   - &TheAnonymousCrusher TheAnonymousCrusher
   - &42willow 42willow
+  - &scarcekoi scarcekoi
 
 userstyles:
   advent-of-code:
@@ -578,6 +579,12 @@ userstyles:
     icon: lobsters
     color: red
     current-maintainers: [*steinuil]
+  lufi:
+    name: Lufi
+    link: https://upload.disroot.org
+    categories: [productivity]
+    color: red
+    current-maintainers: [*scarcekoi]
   mastodon:
     name: Mastodon
     link: https://github.com/mastodon/mastodon
