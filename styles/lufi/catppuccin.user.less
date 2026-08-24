@@ -17,7 +17,7 @@
 
 @import "https://userstyles.catppuccin.com/lib/std/v1.less";
 
-@-moz-document domain("<website-domain>") {
+@-moz-document url-prefix("https://upload.disroot.org") {
   :root[data-theme="dark"] {
     #catppuccin(@darkFlavor);
   }
@@ -28,5 +28,286 @@
   #catppuccin(@flavor) {
     #lib.palette();
     #lib.defaults();
+
+    body {
+        background-color: #ffffff;
+    }
+    #files {
+        border-color: #BBB;
+        color: #888;
+    }
+    #files label {
+        color: #FFF;
+    }
+    #files input {
+        background-color: rgba(150,225,150,0.0);
+        color: #FFF;
+    }
+    a.classic,
+    a.classic:hover,
+    a.classic:focus {
+        color: #337AB7;
+    }
+    .like-label {
+        color: #9e9e9e;
+    }
+    .select-lang .select-wrapper span.caret {
+        color: #FFF;
+    }
+    .select-lang-mobile .select-wrapper input.select-dropdown {
+        color: #444;
+    }
+    nav .btn-flat {
+        color: #fff !important;
+    }
+    nav .btn-flat:focus {
+        background-color: rgba(0,0,0,0.1) !important;
+    }
+
+    .toast.teal.accent-3,
+    .toast.red.accent-2 {
+        color: black;
+    }
+
+    .side-nav .btn-flat {
+        color: #444 !important;
+    }
+
+    table.highlight > tbody > tr:hover {
+        background-color: #c6d4ee;
+    }
+
+    .white-background {
+        background-color: #FFF;
+    }
+
+    --color-main: #50162D;
+    --color-main-light: #711238;
+    --color-accent1: #b71b59;
+    --color-accent2: #CC0655;
+
+    a.classic:focus {
+        color: green;
+    }
+    table.highlight > tbody > tr:hover {
+        background-color: red;
+    }
+
+    .light-blue.darken-1 {
+      background-color: var(--color-accent2) !important;
+    }
+
+    .light-blue-text.text-darken-1 {
+      color: var(--color-accent2) !important;
+    }
+
+    .cyan {
+      background-color: var(--color-main) !important;
+    }
+
+    .teal.lighten-1 {
+      background-color: var(--color-main-light) !important;
+    }
+
+    .teal-text.text-lighten-1 {
+      color: var(--color-main-light) !important;
+    }
+
+
+    .teal.accent-3 {
+      background-color: #F7CFDF !important;
+    }
+
+    .teal-text.text-accent-3 {
+      color: #F7CFDF !important;
+    }
+
+    .orange.accent-2 {
+      background-color: var(--color-accemt) !important;
+    }
+
+    .orange-text.text-accent-2 {
+      color: var(--color-accemt) !important;
+    }
+
+    .collection .collection-item.active {
+      background-color: var(--color-main-light);
+      color: #eafaf9;
+    }
+
+    .collection a.collection-item {
+      color: var(--color-main-light);
+    }
+
+    .secondary-content {
+      color: var(--color-main-light);
+    }
+
+    span.badge.new {
+      color: #fff;
+      background-color: var(--color-main-light);
+    }
+
+    .progress {
+      background-color: #f0cbda;
+    }
+
+    .progress .determinate {
+      background-color: var(--color-main-light);
+    }
+
+    .progress .indeterminate {
+      background-color: var(--color-main-light);
+    }
+
+
+    nav ul li.active {
+      background-color: rgba(0, 0, 0, 0.3);
+    }
+
+    nav ul a:hover {
+      background-color: rgba(0, 0, 0, 0.4);
+    }
+
+    .card .card-action a:not(.btn):not(.btn-large):not(.btn-floating) {
+      color: var(--color-accemt);
+    }
+
+    .card .card-action a:not(.btn):not(.btn-large):not(.btn-floating):hover {
+      color: #f289b3;
+    }
+
+    .btn, .btn-large {
+      color: #fff;
+      background-color: var(--color-main-light);
+    }
+
+    .btn:hover, .btn-large:hover {
+      background-color: #c84578;
+    }
+
+    .btn-floating {
+      color: #fff;
+      background-color: var(--color-main-light);
+    }
+    .btn-floating:hover {
+      background-color: var(--color-main-light);
+    }
+
+    .dropdown-content li:hover, .dropdown-content li.active, .dropdown-content li.selected {
+      background-color: #FFF0F4;
+    }
+
+    .dropdown-content li > a, .dropdown-content li > span {
+      color: var(--color-main-light);
+    }
+
+    input:not([type]):focus:not([readonly]),
+    input[type=text]:focus:not([readonly]),
+    input[type=password]:focus:not([readonly]),
+    input[type=email]:focus:not([readonly]),
+    input[type=url]:focus:not([readonly]),
+    input[type=time]:focus:not([readonly]),
+    input[type=date]:focus:not([readonly]),
+    input[type=datetime-local]:focus:not([readonly]),
+    input[type=tel]:focus:not([readonly]),
+    input[type=number]:focus:not([readonly]),
+    input[type=search]:focus:not([readonly]),
+    textarea.materialize-textarea:focus:not([readonly]) {
+      border-bottom-color: var(--color-main-light);
+      box-shadow: 0 1px 0 0 var(--color-main-light);
+    }
+
+    input:not([type]):focus:not([readonly]) + label,
+    input[type=text]:focus:not([readonly]) + label,
+    input[type=password]:focus:not([readonly]) + label,
+    input[type=email]:focus:not([readonly]) + label,
+    input[type=url]:focus:not([readonly]) + label,
+    input[type=time]:focus:not([readonly]) + label,
+    input[type=date]:focus:not([readonly]) + label,
+    input[type=datetime-local]:focus:not([readonly]) + label,
+    input[type=tel]:focus:not([readonly]) + label,
+    input[type=number]:focus:not([readonly]) + label,
+    input[type=search]:focus:not([readonly]) + label,
+    textarea.materialize-textarea:focus:not([readonly]) + label {
+      color: var(--color-main-light);
+    }
+
+    .input-field .prefix.active {
+      color: var(--color-main-light);
+    }
+
+    [type="radio"]:checked + label:after {
+      border-color: var(--color-main-light);
+      background-color: var(--color-main-light);
+    }
+
+    /* Radio With gap */
+    [type="radio"].with-gap:checked + label:before {
+      border-color: var(--color-main-light);
+    }
+
+    [type="radio"].with-gap:checked + label:after {
+      border-color: var(--color-main-light);
+      background-color: var(--color-main-light);
+    }
+
+    [type="checkbox"]:checked + label:before {
+      border-right-color: var(--color-main-light);
+      border-bottom-color: var(--color-main-light);
+    }
+
+    /* Indeterminate checkbox */
+    [type="checkbox"]:indeterminate + label:before {
+      border-right-color: var(--color-main-light);
+    }
+
+    [type="checkbox"].filled-in:checked + label:after {
+      border-color: var(--color-main-light);
+      background-color: var(--color-main-light);
+    }
+
+    .switch label input[type=checkbox]:checked + .lever:after {
+      background-color: var(--color-main-light);
+    }
+
+    .select-dropdown li.optgroup {
+      border-top-color: #FFF0F4;
+    }
+    input[type=range] + .thumb {
+      background-color: var(--color-main-light);
+    }
+
+    input[type=range] + .thumb .value {
+      color: var(--color-main-light);
+    }
+
+    input[type=range]::-webkit-slider-thumb {
+      background-color: var(--color-main-light);
+    }
+
+    input[type=range]::-moz-range-thumb {
+      background-color: var(--color-main-light);
+    }
+
+    input[type=range]::-ms-thumb {
+      background-color: var(--color-main-light);
+    }
+    .spinner-layer {
+      border-color: var(--color-main-light);
+    }
+    .picker__date-display {
+      background-color: var(--color-main-light);
+      color: #fff;
+    }
+    .picker__close, .picker__today {
+      color: var(--color-main-light);
+    }
+    .picker__day--selected,
+    .picker__day--selected:hover,
+    .picker--focused .picker__day--selected {
+      background-color: var(--color-main-light);
+      color: #ffffff;
+    }
   }
 }
